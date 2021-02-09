@@ -5,6 +5,7 @@ import numpy as np
 
 
 API_URL = "https://api.golly.life"
+LAST_SEASON = 9
 
 
 def get_endpoint_json(endpoint):
@@ -65,8 +66,6 @@ def streak_summary(team_name, team_df):
 
 def main():
 
-    print('loading initial data')
-
     teams = get_teams()
     teams.sort(key = lambda x : x['teamName'])
     team_names = [t['teamName'] for t in teams]
@@ -83,8 +82,14 @@ def main():
             self.team_df = team_df
             self.streak_length = streak_length
 
+            season = list(set(team_df['season'].values))
+            if len(season)>1:
+                raise Exception("Error with team df passed to Streak: too many seasons! One at a time.")
+            self.season = season[0]
+
             self.df = None
             streak_days = range(streak_end_day-streak_length+1, streak_end_day+1)
+            self.streak_days = streak_days
             for today in streak_days:
                 z = team_df.loc[team_df['day']==today]
                 if self.df is None:
@@ -93,18 +98,59 @@ def main():
                     self.df = self.df.append(z)
         def __repr__(self):
             s = ""
-            s += f"{self.team_name} Streak: {self.streak_length}n\n"
+
+            # Columns:
+            # season
+            # days
+            # length
+            # team
+            # team runs
+            # opponent runs
+            # opponents list
+
+            s += "|-\n"
+            s += f"| [[Season {self.season+1}|S{self.season+1}]]\n"
+            s += f"| {', '.join([str(j) for j in self.streak_days])}\n"
+            s += f"| {self.streak_length}\n"
+            s += f"| [[{self.team_name}]]\n"
+
+            our_score = 0
+            their_score = 0
+            opponents_list = set()
             for irow, row in self.df.iterrows():
-                s += f"    {row['team1Name']} {row['team1Score']:>4} - {row['team2Score']:<4} {row['team2Name']}\n"
+                if row['team1Name']==self.team_name:
+                    our_score += row['team1Score']
+                    their_score += row['team2Score']
+                    opponents_list.add(row['team2Name'])
+            opponents_list = sorted(list(opponents_list))
+
+            s += f"| {our_score}\n"
+            s += f"| {their_score}\n"
+            s += f"| [[{']], [['.join(opponents_list)}]]\n"
+
             return s
+
+    ##################################################
+    # streak tables
+
+    # Print table header
+    th = ""
+    th += "{| class=\"wikitable\"\n"
+    th += "|-\n"
+    th += "!Season\n"
+    th += "!Days\n"
+    th += "!Length\n"
+    th += "!Team\n"
+    th += "!Score\n"
+    th += "!Opp. Score\n"
+    th += "!Opponents\n"
+
+    wtb = ""
+    ltb = ""
 
     wstreaks = []
     lstreaks = []
-
-    for this_season in range(6):
-
-        print(f'parsing season {this_season+1} data')
-
+    for this_season in range(LAST_SEASON):
         season_dat = get_season(this_season)
         season_df = pd.DataFrame()
         for day in season_dat:
@@ -139,26 +185,39 @@ def main():
             lstreak = min(summary)
             lstreak_end_days = list(team_df.loc[summary.loc[summary==min(summary)].index]['day'].values)
             for lstreak_end_day in lstreak_end_days:
-                s = Streak(team_name, team_df, lstreak, lstreak_end_day)
-                lstreaks.append((lstreak, this_season, s))
+                lstreakmag = abs(lstreak)
+                s = Streak(team_name, team_df, lstreakmag, lstreak_end_day)
+                lstreaks.append((lstreakmag, this_season, s))
 
-    # Sort by streak length
-    wstreaks.sort(key=lambda x: x[0], reverse=True)
-    lstreaks.sort(key=lambda x: x[0], reverse=True)
+        # Get length of record winning streaks for this season
+        wstreaks_this_season = [j for j in wstreaks if j[1]==this_season]
+        wstreaks_this_season.sort(key=lambda x: x[2].team_name)
+        wstreaks_record_season = max(set([j[0] for j in wstreaks_this_season]))
+        # Print out each one
+        for w in wstreaks_this_season:
+            if w[0]==wstreaks_record_season:
+                wtb += str(w[2])
 
-    # Now step through each season:
-    # - find the record for that season plus all prior seasons
-    # - find the record for that season only
-    # - if this season greater than or equal to, include it
-    # in the table of records
-    for this_season in range(6):
-        wstreaks_record_allprev = max(set([j[0] for j in wstreaks if j[1]<=this_season]))
-        wstreaks_record_season = max(set([j[0] for j in wstreaks if j[1]==this_season]))
-        print(f'season {this_season}:')
-        if wstreaks_record_season>=wstreaks_record_allprev:
-            for w in wstreaks:
-                if w[0]==wstreaks_record_season:
-                    print(w[2])
+        # Get length of record losing streaks for this season
+        lstreaks_this_season = [j for j in lstreaks if j[1]==this_season]
+        lstreaks_this_season.sort(key=lambda x: x[2].team_name)
+        lstreaks_record_season = max(set([j[0] for j in lstreaks_this_season]))
+        # Print out each one
+        for lo in lstreaks_this_season:
+            if lo[0]==lstreaks_record_season:
+                ltb += str(lo[2])
+
+    tf = "|}"
+
+    print("\n\n\n= Winning Streaks =\n")
+    print(th)
+    print(wtb)
+    print(tf)
+
+    print("\n\n\n= Losing Streaks =\n")
+    print(th)
+    print(ltb)
+    print(tf)
 
 
 if __name__ == "__main__":
