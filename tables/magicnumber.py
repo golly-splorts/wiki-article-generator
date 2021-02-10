@@ -90,15 +90,22 @@ def main():
         for league in reversed(leagues):
 
             for i, day in enumerate(season_dat):
+
+                #############################
+                # TODO: Figure out how to get
+                # bottom 4 teams without ties
+                #############################
+
                 # Get the rankings of each team as of today
                 today_ranking_list = []
                 for game in day:
                     if game['league'] == league:
-                        today_ranking_list.append((game['team1Name'], game['team1WinLoss'][0]))
-                        today_ranking_list.append((game['team2Name'], game['team2WinLoss'][0]))
-                today_ranking_list.sort(key=lambda x: x[1], reverse=True)
+                        today_name, today_wins = today_ranking_list[k]
+                        today_ranking_list.append((tdoay_name, today_wins))
+                        .update([game['team1Name'],]*game['team1WinLoss'][0])
 
                 # Get the names of the bottom 4 teams as of today
+
                 today_bottom4_names = set()
                 for k in range(4, 8):
                     today_bottom4_names.add(today_ranking_list[k][0])
