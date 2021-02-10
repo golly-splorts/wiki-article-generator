@@ -110,7 +110,7 @@ def main():
 
             s += "|-\n"
             s += f"| [[Season {self.season+1}|S{self.season+1}]]\n"
-            s += f"| {', '.join([str(j) for j in self.streak_days])}\n"
+            s += f"| {', '.join([str(j+1) for j in self.streak_days])}\n"
             s += f"| {self.streak_length}\n"
             s += f"| [[{self.team_name}]]\n"
 
