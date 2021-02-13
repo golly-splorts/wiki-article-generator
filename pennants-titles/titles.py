@@ -109,28 +109,24 @@ def main():
     # Sort by season
     title_winners.sort(key=lambda x: x[0])
 
-    with open('titles.txt', 'w') as f:
+    for league in leagues:
+        league_prefix = league.split(" ")[0]
+        for division in divisions:
+            division_prefix = division.split(" ")[0]
 
-        th = ""
-        th += "{| class=\"wikitable\"\n"
-        th += "|-\n"
-        th += "!Season\n"
-        th += "!Division Title Winner\n"
-        th += "!Season W-L Record\n"
+            filename = f"titles_{league_prefix.lower()}_{division_prefix.lower()}.txt"
 
-        tf  = "|}\n\n"
+            with open(filename, 'w') as f:
 
-        print("= Division Titles =", file=f)
-        print("", file=f)
-        print("The teams that finish the season at the top of their division win a Division Title.", file=f)
-        print("", file=f)
-        print("The following table lists division title winners for each season for the Hot and Cold Leagues:", file=f)
-        print("", file=f)
+                th = ""
+                th += "{| class=\"wikitable\"\n"
+                th += "|-\n"
+                th += "!Season\n"
+                th += "!Division Title Winner\n"
+                th += "!Season W-L Record\n"
 
-        for league in leagues:
-            league_prefix = league.split(" ")[0]
-            for division in divisions:
-                division_prefix = division.split(" ")[0]
+                tf = "|}<noinclude>\n[[Category:Hellmouth Cup]]]\nCategory:Update Each Season]]\n[[Category:Leagues Table Template]]\n</noinclude>\n"
+
 
                 tb = ""
 
@@ -148,12 +144,11 @@ def main():
                     tb += f"| style=\"font-weight:bold; text-align:center; background-color:{{{{TeamAbbrToHexColor|{seed_abbr}}}}}; color:#272B30;\" | {seed_name} (#{seed_rank})\n"
                     tb += f"| style=\"font-weight:bold; text-align:center; background-color:{{{{TeamAbbrToHexColor|{seed_abbr}}}}}; color:#272B30;\" | {seed_wl}\n"
 
-                print(f"== {league_prefix} {division_prefix} ==\n", file=f)
                 print(th, file=f)
                 print(tb, file=f)
                 print(tf, file=f)
 
-    print("titles.txt done")
+            print(f"{filename} done")
 
 
 if __name__ == "__main__":
