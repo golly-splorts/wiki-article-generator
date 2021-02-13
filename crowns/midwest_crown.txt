@@ -51,4 +51,14 @@
 | {{TeamLogo|MILF}} 6 - 4 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 1302 - 1261 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+|-
+| [[Season 10|S10]]
+| {{TeamLogo|MILF}} 4 - 2 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 979 - 644 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
 |}
+
+[[Category:Crown]]]
+[[Category:Update Each Season]]
+[[Category:MILF]]
+[[Category:DET]]

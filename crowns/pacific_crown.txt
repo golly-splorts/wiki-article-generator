@@ -51,4 +51,14 @@
 | {{TeamLogo|LBFB}} 7 - 5 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 1428 - 1351 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 10|S10]]
+| {{TeamLogo|LBFB}} 4 - 4 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1074 - 972 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
 |}
+
+[[Category:Crown]]]
+[[Category:Update Each Season]]
+[[Category:LBFB]]
+[[Category:SDBA]]

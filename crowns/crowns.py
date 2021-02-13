@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://api.golly.life"
-LAST_SEASON = 9
+LAST_SEASON = 10
 
 
 def get_endpoint_json(endpoint):
@@ -118,10 +118,14 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df):
         tb += f"| [[Season {this_season+1}|S{this_season+1}]]\n"
         tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_wins} - {teamb_wins} {{{{TeamLogo|{teamb_abbr}}}}}\n"
         tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_runs} - {teamb_runs} {{{{TeamLogo|{teamb_abbr}}}}}\n"
-        tb += f"| style=\"font-weight:bold; background-color:{{{{TeamAbbrToHexColor|{crown_winner_abbr}}}}}; color: #272B30;\" | {crown_winner}\n"
+        tb += f"| style=\"font-weight:bold; background-color:{{{{TeamAbbrToHexColor|{crown_winner_abbr}}}}}; color:#272B30;\" | {crown_winner}\n"
 
 
-    tf = "|}"
+    tf = "|}\n\n"
+    tf += "[[Category:Crown]]]\n"
+    tf += "[[Category:Update Each Season]]\n"
+    tf += f"[[Category:{teama_abbr.upper()}]]\n"
+    tf += f"[[Category:{teamb_abbr.upper()}]]\n"
 
     return th + tb + tf
 

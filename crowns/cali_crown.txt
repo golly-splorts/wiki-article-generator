@@ -51,4 +51,14 @@
 | {{TeamLogo|SFBS}} 1 - 1 {{TeamLogo|SAC}}
 | {{TeamLogo|SFBS}} 203 - 224 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 10|S10]]
+| {{TeamLogo|SFBS}} 9 - 3 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1842 - 1120 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color: #272B30;" | San Francisco Boat Shoes
 |}
+
+[[Category:Crown]]]
+[[Category:Update Each Season]]
+[[Category:SFBS]]
+[[Category:SAC]]

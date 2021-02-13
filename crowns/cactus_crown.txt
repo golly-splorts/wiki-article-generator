@@ -51,4 +51,14 @@
 | {{TeamLogo|EA}} 3 - 2 {{TeamLogo|TB}}
 | {{TeamLogo|EA}} 736 - 595 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 10|S10]]
+| {{TeamLogo|EA}} 2 - 2 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 508 - 732 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color: #272B30;" | Tucson Butchers
 |}
+
+[[Category:Crown]]]
+[[Category:Update Each Season]]
+[[Category:EA]]
+[[Category:TB]]

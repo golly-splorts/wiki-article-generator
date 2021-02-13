@@ -51,4 +51,14 @@
 | {{TeamLogo|BTX}} 6 - 6 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 1734 - 1478 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color: #272B30;" | Baltimore Texas
+|-
+| [[Season 10|S10]]
+| {{TeamLogo|BTX}} 4 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 779 - 1167 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color: #272B30;" | Ft. Worth Piano Tuners
 |}
+
+[[Category:Crown]]]
+[[Category:Update Each Season]]
+[[Category:BTX]]
+[[Category:FWPT]]
