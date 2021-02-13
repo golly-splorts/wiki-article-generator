@@ -1,0 +1,54 @@
+{| class="wikitable" style="text-align:center;" width="60%"
+|-
+! colspan=4 | {{Team|SFBS|link=false|color=true}} vs. {{Team|SAC|link=false|color=true}}
+|-
+!Season
+!Wins
+!Runs
+!Crown Winner
+|-
+| [[Season 1|S1]]
+| {{TeamLogo|SFBS}} 4 - 2 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 873 - 431 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color: #272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 2|S2]]
+| {{TeamLogo|SFBS}} 4 - 2 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 942 - 531 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color: #272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 3|S3]]
+| {{TeamLogo|SFBS}} 3 - 3 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 660 - 1177 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 4|S4]]
+| {{TeamLogo|SFBS}} 3 - 5 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 886 - 1243 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 5|S5]]
+| {{TeamLogo|SFBS}} 1 - 3 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 517 - 712 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 6|S6]]
+| {{TeamLogo|SFBS}} 4 - 4 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1123 - 1395 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 7|S7]]
+| {{TeamLogo|SFBS}} 7 - 4 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 2021 - 1364 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color: #272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 8|S8]]
+| {{TeamLogo|SFBS}} 1 - 5 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 533 - 934 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 9|S9]]
+| {{TeamLogo|SFBS}} 1 - 1 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 203 - 224 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color: #272B30;" | Sacramento Boot Lickers
+|}

@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://api.golly.life"
-LAST_SEASON = 1
+LAST_SEASON = 9
 
 
 def get_endpoint_json(endpoint):
@@ -48,12 +48,18 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df):
 
     # Print table header
     th = ""
-    th += '{| class="wikitable" style="text-align:center;"\n'
+    th += '{| class="wikitable" style="text-align:center;" width="60%"\n'
+    th += "|-\n"
+
+    th += f"! colspan=4 | {{{{Team|{teama_abbr}|link=false|color=true}}}} vs. {{{{Team|{teamb_abbr}|link=false|color=true}}}}\n"
+    #th += f"!{{{{Team|{teama_abbr}|link=false|color=true}}}} Wins\n"
+    #th += f"!{{{{Team|{teamb_abbr}|link=false|color=true}}}} Wins\n"
+    #th += f"!Runs ({teama_abbr} - {teamb_abbr})\n"
+
     th += "|-\n"
     th += "!Season\n"
-    th += f"!{{{{Team|{teama_abbr}|link=false|color=true}}}} Wins\n"
-    th += f"!{{{{Team|{teamb_abbr}|link=false|color=true}}}} Wins\n"
-    th += f"!Runs ({teama_abbr} - {teamb_abbr})\n"
+    th += "!Wins\n"
+    th += "!Runs\n"
     th += "!Crown Winner\n"
 
     tb = ""
@@ -110,9 +116,8 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df):
 
         tb += "|-\n"
         tb += f"| [[Season {this_season+1}|S{this_season+1}]]\n"
-        tb += f"| {teama_wins}\n"
-        tb += f"| {teamb_wins}\n"
-        tb += f"| {teama_runs} - {teamb_runs}\n"
+        tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_wins} - {teamb_wins} {{{{TeamLogo|{teamb_abbr}}}}}\n"
+        tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_runs} - {teamb_runs} {{{{TeamLogo|{teamb_abbr}}}}}\n"
         tb += f"| style=\"font-weight:bold; background-color:{{{{TeamAbbrToHexColor|{crown_winner_abbr}}}}}; color: #272B30;\" | {crown_winner}\n"
 
 

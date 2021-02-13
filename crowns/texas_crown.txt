@@ -1,0 +1,54 @@
+{| class="wikitable" style="text-align:center;" width="60%"
+|-
+! colspan=4 | {{Team|BTX|link=false|color=true}} vs. {{Team|FWPT|link=false|color=true}}
+|-
+!Season
+!Wins
+!Runs
+!Crown Winner
+|-
+| [[Season 1|S1]]
+| {{TeamLogo|BTX}} 4 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1349 - 899 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color: #272B30;" | Baltimore Texas
+|-
+| [[Season 2|S2]]
+| {{TeamLogo|BTX}} 1 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 566 - 917 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color: #272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 3|S3]]
+| {{TeamLogo|BTX}} 3 - 3 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 672 - 712 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color: #272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 4|S4]]
+| {{TeamLogo|BTX}} 2 - 2 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 386 - 428 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color: #272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 5|S5]]
+| {{TeamLogo|BTX}} 5 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1105 - 993 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color: #272B30;" | Baltimore Texas
+|-
+| [[Season 6|S6]]
+| {{TeamLogo|BTX}} 4 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 857 - 1206 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color: #272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 7|S7]]
+| {{TeamLogo|BTX}} 4 - 6 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1332 - 1281 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color: #272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 8|S8]]
+| {{TeamLogo|BTX}} 6 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1335 - 1226 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color: #272B30;" | Baltimore Texas
+|-
+| [[Season 9|S9]]
+| {{TeamLogo|BTX}} 6 - 6 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1734 - 1478 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color: #272B30;" | Baltimore Texas
+|}

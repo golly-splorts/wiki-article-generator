@@ -1,0 +1,54 @@
+{| class="wikitable" style="text-align:center;" width="60%"
+|-
+! colspan=4 | {{Team|EA|link=false|color=true}} vs. {{Team|TB|link=false|color=true}}
+|-
+!Season
+!Wins
+!Runs
+!Crown Winner
+|-
+| [[Season 1|S1]]
+| {{TeamLogo|EA}} 5 - 3 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1385 - 1049 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 2|S2]]
+| {{TeamLogo|EA}} 6 - 3 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1575 - 882 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 3|S3]]
+| {{TeamLogo|EA}} 4 - 4 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 897 - 1308 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color: #272B30;" | Tucson Butchers
+|-
+| [[Season 4|S4]]
+| {{TeamLogo|EA}} 2 - 4 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 499 - 879 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color: #272B30;" | Tucson Butchers
+|-
+| [[Season 5|S5]]
+| {{TeamLogo|EA}} 1 - 1 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 264 - 183 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 6|S6]]
+| {{TeamLogo|EA}} 3 - 1 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 421 - 243 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 7|S7]]
+| {{TeamLogo|EA}} 4 - 4 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1110 - 958 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 8|S8]]
+| {{TeamLogo|EA}} 2 - 0 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 396 - 146 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|-
+| [[Season 9|S9]]
+| {{TeamLogo|EA}} 3 - 2 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 736 - 595 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color: #272B30;" | Elko Astronauts
+|}

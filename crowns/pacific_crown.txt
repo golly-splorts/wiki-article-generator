@@ -1,0 +1,54 @@
+{| class="wikitable" style="text-align:center;" width="60%"
+|-
+! colspan=4 | {{Team|LBFB|link=false|color=true}} vs. {{Team|SDBA|link=false|color=true}}
+|-
+!Season
+!Wins
+!Runs
+!Crown Winner
+|-
+| [[Season 1|S1]]
+| {{TeamLogo|LBFB}} 4 - 4 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1270 - 860 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 2|S2]]
+| {{TeamLogo|LBFB}} 2 - 3 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 816 - 695 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color: #272B30;" | San Diego Balloon Animals
+|-
+| [[Season 3|S3]]
+| {{TeamLogo|LBFB}} 2 - 4 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 787 - 842 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color: #272B30;" | San Diego Balloon Animals
+|-
+| [[Season 4|S4]]
+| {{TeamLogo|LBFB}} 2 - 2 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 484 - 386 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 5|S5]]
+| {{TeamLogo|LBFB}} 5 - 1 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 944 - 760 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 6|S6]]
+| {{TeamLogo|LBFB}} 4 - 3 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 831 - 826 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 7|S7]]
+| {{TeamLogo|LBFB}} 4 - 4 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1079 - 1149 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color: #272B30;" | San Diego Balloon Animals
+|-
+| [[Season 8|S8]]
+| {{TeamLogo|LBFB}} 6 - 2 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1239 - 680 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 9|S9]]
+| {{TeamLogo|LBFB}} 7 - 5 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1428 - 1351 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color: #272B30;" | Long Beach Flightless Birds
+|}
