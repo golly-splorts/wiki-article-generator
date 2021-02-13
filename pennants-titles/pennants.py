@@ -154,7 +154,7 @@ def main():
             print(tb, file=f)
             print(tf, file=f)
 
-    print("pennants.txt done")
+        print(f"{filename} done")
 
 
 if __name__ == "__main__":
