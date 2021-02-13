@@ -46,152 +46,155 @@ def main():
     maps = get_maps()
     maps.sort(key = lambda x : x['mapName'])
 
-    ##################################################
-    # shutouts table
+
+    with open('hiscore.txt', 'w') as f:
+
+        post4_all_df = pd.DataFrame()
+
+        for this_season in range(4,LAST_SEASON):
+
+            season_dat = get_season(this_season)
+            for day in season_dat:
+                for game in day:
+                    # Filter the WinLoss fields, since they aren't used and complicate the pandas import
+                    game = {k: v for k, v in game.items() if 'WinLoss' not in k}
+                    if game['team1Score'] > game['team2Score']:
+                        game['winningTeamName'] = game['team1Name']
+                        game['losingTeamName'] = game['team2Name']
+                        game['winningTeamScore'] = game['team1Score']
+                        game['losingTeamScore'] = game['team2Score']
+                    else:
+                        game['winningTeamName'] = game['team2Name']
+                        game['losingTeamName'] = game['team1Name']
+                        game['winningTeamScore'] = game['team2Score']
+                        game['losingTeamScore'] = game['team1Score']
+
+                    # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
+                    game_df = pd.DataFrame(game, index=[0])
+                    # aaaand then we just ignore it again
+                    post4_all_df = post4_all_df.append(game_df, ignore_index=True)
+
+        post4_all_df = post4_all_df.sort_values('winningTeamScore', ascending=False)
+
+        th = ""
+        th += "{| class=\"wikitable\"\n"
+        th += "|-\n"
+        th += "!Season\n"
+        th += "!Day\n"
+        th += "!Winning Team\n"
+        th += "!W Score\n"
+        th += "!L Score\n"
+        th += "!Losing Team\n"
+        th += "!Game Link\n"
+
+        tb = ""
+
+        for i, row in post4_all_df.head(20).iterrows():
+            season = row['season']
+            day = row['day']
+            wteam = row['winningTeamName']
+            wscore = row['winningTeamScore']
+            lteam = row['losingTeamName']
+            lscore = row['losingTeamScore']
+            game_id = row['id']
+            tb += "|-\n"
+            tb += f"| [[Season {season+1}|S{season+1}]]\n"
+            tb += f"| {day+1}\n"
+            tb += f"| [[{wteam}]]\n"
+            tb += f"| {wscore}\n"
+            tb += f"| {lscore}\n"
+            tb += f"| [[{lteam}]]\n"
+            tb += f"| {{{{Game|{game_id}}}}}\n"
+
+        tf = "|}\n\n"
+
+        print("= High Score =", file=f)
+        print("", file=f)
+        print("A table of the all-time highest-scoring Golly games.", file=f)
+        print("", file=f)
+        print("Games occuring during Seasons 1-3 were plagued by the [[Season 3/Fixing Scandal|Season 3 Hellmouth Cup Fixing Scandal]] bug,", file=f)
+        print("so they are listed separately.", file=f)
+        print("", file=f)
+
+        print("== After Season 3 ==", file=f)
+        print("", file=f)
+
+        print(th, file=f)
+        print(tb, file=f)
+        print(tf, file=f)
 
 
-    print("= High Score =")
-    print("")
-    print("A table of the all-time highest-scoring Golly games.")
-    print("")
-    print("Games occuring during Seasons 1-3 were plagued by the [[Season 3/Fixing Scandal|Season 3 Hellmouth Cup Fixing Scandal]] bug,")
-    print("so they are listed separately.")
-    print("")
+        # ----------------------------------------------------
 
-    print("== After Season 3 ==")
-    print("")
+        pre4_all_df = pd.DataFrame()
 
-    post4_all_df = pd.DataFrame()
+        for this_season in range(min(LAST_SEASON,4)):
 
-    for this_season in range(4,LAST_SEASON):
+            season_dat = get_season(this_season)
+            for day in season_dat:
+                for game in day:
+                    # Filter the WinLoss fields, since they aren't used and complicate the pandas import
+                    game = {k: v for k, v in game.items() if 'WinLoss' not in k}
+                    if game['team1Score'] > game['team2Score']:
+                        game['winningTeamName'] = game['team1Name']
+                        game['losingTeamName'] = game['team2Name']
+                        game['winningTeamScore'] = game['team1Score']
+                        game['losingTeamScore'] = game['team2Score']
+                    else:
+                        game['winningTeamName'] = game['team2Name']
+                        game['losingTeamName'] = game['team1Name']
+                        game['winningTeamScore'] = game['team2Score']
+                        game['losingTeamScore'] = game['team1Score']
 
-        season_dat = get_season(this_season)
-        for day in season_dat:
-            for game in day:
-                # Filter the WinLoss fields, since they aren't used and complicate the pandas import
-                game = {k: v for k, v in game.items() if 'WinLoss' not in k}
-                if game['team1Score'] > game['team2Score']:
-                    game['winningTeamName'] = game['team1Name']
-                    game['losingTeamName'] = game['team2Name']
-                    game['winningTeamScore'] = game['team1Score']
-                    game['losingTeamScore'] = game['team2Score']
-                else:
-                    game['winningTeamName'] = game['team2Name']
-                    game['losingTeamName'] = game['team1Name']
-                    game['winningTeamScore'] = game['team2Score']
-                    game['losingTeamScore'] = game['team1Score']
+                    # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
+                    game_df = pd.DataFrame(game, index=[0])
+                    # aaaand then we just ignore it again
+                    pre4_all_df = pre4_all_df.append(game_df, ignore_index=True)
 
-                # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
-                game_df = pd.DataFrame(game, index=[0])
-                # aaaand then we just ignore it again
-                post4_all_df = post4_all_df.append(game_df, ignore_index=True)
+        pre4_all_df = pre4_all_df.sort_values('winningTeamScore', ascending=False)
 
-    post4_all_df = post4_all_df.sort_values('winningTeamScore', ascending=False)
+        th = ""
+        th += "{| class=\"wikitable\"\n"
+        th += "|-\n"
+        th += "!Season\n"
+        th += "!Day\n"
+        th += "!Winning Team\n"
+        th += "!W Score\n"
+        th += "!L Score\n"
+        th += "!Losing Team\n"
+        th += "!Game Link\n"
 
-    th = ""
-    th += "{| class=\"wikitable\"\n"
-    th += "|-\n"
-    th += "!Season\n"
-    th += "!Day\n"
-    th += "!Winning Team\n"
-    th += "!W Score\n"
-    th += "!L Score\n"
-    th += "!Losing Team\n"
-    th += "!Game Link\n"
+        tb = ""
 
-    tb = ""
+        for i, row in pre4_all_df.head(20).iterrows():
+            season = row['season']
+            day = row['day']
+            wteam = row['winningTeamName']
+            wscore = row['winningTeamScore']
+            lteam = row['losingTeamName']
+            lscore = row['losingTeamScore']
+            game_id = row['id']
+            tb += "|-\n"
+            tb += f"| [[Season {season+1}|S{season+1}]]\n"
+            tb += f"| {day+1}\n"
+            tb += f"| [[{wteam}]]\n"
+            tb += f"| {wscore}\n"
+            tb += f"| {lscore}\n"
+            tb += f"| [[{lteam}]]\n"
+            tb += f"| {{{{Game|{game_id}}}}}\n"
 
-    for i, row in post4_all_df.head(20).iterrows():
-        season = row['season']
-        day = row['day']
-        wteam = row['winningTeamName']
-        wscore = row['winningTeamScore']
-        lteam = row['losingTeamName']
-        lscore = row['losingTeamScore']
-        game_id = row['id']
-        tb += "|-\n"
-        tb += f"| [[Season {season+1}|S{season+1}]]\n"
-        tb += f"| {day+1}\n"
-        tb += f"| [[{wteam}]]\n"
-        tb += f"| {wscore}\n"
-        tb += f"| {lscore}\n"
-        tb += f"| [[{lteam}]]\n"
-        tb += f"| {{{{Game|{game_id}}}}}\n"
+        tf = "|}\n\n"
+        tf += "{{Navbox stlats}}\n\n"
+        tf += "[[Category:Stlats]]\n"
+        tf += "[[Category:Update Each Season]]\n"
 
-    tf = "|}"
+        print("== Before Season 3 ==", file=f)
+        print("", file=f)
+        print(th, file=f)
+        print(tb, file=f)
+        print(tf, file=f)
 
-    print(f"\n\n== Shutouts Season {this_season+1} ==\n")
-    print(th)
-    print(tb)
-    print(tf)
-
-
-    print("== Before Season 3 ==")
-    print("")
-
-    pre4_all_df = pd.DataFrame()
-
-    for this_season in range(min(LAST_SEASON,4)):
-
-        season_dat = get_season(this_season)
-        for day in season_dat:
-            for game in day:
-                # Filter the WinLoss fields, since they aren't used and complicate the pandas import
-                game = {k: v for k, v in game.items() if 'WinLoss' not in k}
-                if game['team1Score'] > game['team2Score']:
-                    game['winningTeamName'] = game['team1Name']
-                    game['losingTeamName'] = game['team2Name']
-                    game['winningTeamScore'] = game['team1Score']
-                    game['losingTeamScore'] = game['team2Score']
-                else:
-                    game['winningTeamName'] = game['team2Name']
-                    game['losingTeamName'] = game['team1Name']
-                    game['winningTeamScore'] = game['team2Score']
-                    game['losingTeamScore'] = game['team1Score']
-
-                # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
-                game_df = pd.DataFrame(game, index=[0])
-                # aaaand then we just ignore it again
-                pre4_all_df = pre4_all_df.append(game_df, ignore_index=True)
-
-    pre4_all_df = pre4_all_df.sort_values('winningTeamScore', ascending=False)
-
-    th = ""
-    th += "{| class=\"wikitable\"\n"
-    th += "|-\n"
-    th += "!Season\n"
-    th += "!Day\n"
-    th += "!Winning Team\n"
-    th += "!W Score\n"
-    th += "!L Score\n"
-    th += "!Losing Team\n"
-    th += "!Game Link\n"
-
-    tb = ""
-
-    for i, row in pre4_all_df.head(20).iterrows():
-        season = row['season']
-        day = row['day']
-        wteam = row['winningTeamName']
-        wscore = row['winningTeamScore']
-        lteam = row['losingTeamName']
-        lscore = row['losingTeamScore']
-        game_id = row['id']
-        tb += "|-\n"
-        tb += f"| [[Season {season+1}|S{season+1}]]\n"
-        tb += f"| {day+1}\n"
-        tb += f"| [[{wteam}]]\n"
-        tb += f"| {wscore}\n"
-        tb += f"| {lscore}\n"
-        tb += f"| [[{lteam}]]\n"
-        tb += f"| {{{{Game|{game_id}}}}}\n"
-
-    tf = "|}"
-
-    print(f"\n\n== Shutouts Season {this_season+1} ==\n")
-    print(th)
-    print(tb)
-    print(tf)
+    print("hiscore.txt done")
 
 
 if __name__ == "__main__":

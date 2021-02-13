@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://api.golly.life"
-LAST_SEASON = 9
+LAST_SEASON = 10
 
 
 def get_endpoint_json(endpoint):
@@ -130,95 +130,107 @@ def main():
 
             return s
 
+
     ##################################################
     # streak tables
 
-    # Print table header
-    th = ""
-    th += "{| class=\"wikitable\"\n"
-    th += "|-\n"
-    th += "!Season\n"
-    th += "!Days\n"
-    th += "!Length\n"
-    th += "!Team\n"
-    th += "!Score\n"
-    th += "!Opp. Score\n"
-    th += "!Opponents\n"
+    with open('streaks.txt', 'w') as f:
 
-    wtb = ""
-    ltb = ""
+        th = ""
+        th += "{| class=\"wikitable\"\n"
+        th += "|-\n"
+        th += "!Season\n"
+        th += "!Days\n"
+        th += "!Length\n"
+        th += "!Team\n"
+        th += "!Score\n"
+        th += "!Opp. Score\n"
+        th += "!Opponents\n"
 
-    wstreaks = []
-    lstreaks = []
-    for this_season in range(LAST_SEASON):
-        season_dat = get_season(this_season)
-        season_df = pd.DataFrame()
-        for day in season_dat:
-            for game in day:
-                # Filter the WinLoss fields, since they aren't used and complicate the pandas import
-                game = {k: v for k, v in game.items() if 'WinLoss' not in k}
-                # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
-                game_df = pd.DataFrame(game, index=[0])
-                # aaaand then we just ignore it again
-                season_df = season_df.append(game_df, ignore_index=True)
+        wtb = ""
+        ltb = ""
 
-        team_dfs = {}
-        for iL, league in enumerate(leagues):
-            for iD, division in enumerate(divisions):
-                division_teams = [team for team in teams if team['division']==division and team['league']==league]
-                for iT, division_team in enumerate(division_teams):
-                    team_name = division_team['teamName']
-                    team_df = season_df.loc[(season_df['team1Name']==team_name) | (season_df['team2Name']==team_name)]
-                    team_dfs[team_name] = team_df
+        wstreaks = []
+        lstreaks = []
+        for this_season in range(LAST_SEASON):
+            season_dat = get_season(this_season)
+            season_df = pd.DataFrame()
+            for day in season_dat:
+                for game in day:
+                    # Filter the WinLoss fields, since they aren't used and complicate the pandas import
+                    game = {k: v for k, v in game.items() if 'WinLoss' not in k}
+                    # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
+                    game_df = pd.DataFrame(game, index=[0])
+                    # aaaand then we just ignore it again
+                    season_df = season_df.append(game_df, ignore_index=True)
 
-        for team in teams:
-            team_name = team['teamName']
-            team_df = team_dfs[team_name]
-            summary = streak_summary(team_name, team_df)
+            team_dfs = {}
+            for iL, league in enumerate(leagues):
+                for iD, division in enumerate(divisions):
+                    division_teams = [team for team in teams if team['division']==division and team['league']==league]
+                    for iT, division_team in enumerate(division_teams):
+                        team_name = division_team['teamName']
+                        team_df = season_df.loc[(season_df['team1Name']==team_name) | (season_df['team2Name']==team_name)]
+                        team_dfs[team_name] = team_df
 
-            wstreak = max(summary)
-            wstreak_end_days = list(team_df.loc[summary.loc[summary==max(summary)].index]['day'].values)
-            for wstreak_end_day in wstreak_end_days:
-                s = Streak(team_name, team_df, wstreak, wstreak_end_day)
-                wstreaks.append((wstreak, this_season, s))
+            for team in teams:
+                team_name = team['teamName']
+                team_df = team_dfs[team_name]
+                summary = streak_summary(team_name, team_df)
 
-            lstreak = min(summary)
-            lstreak_end_days = list(team_df.loc[summary.loc[summary==min(summary)].index]['day'].values)
-            for lstreak_end_day in lstreak_end_days:
-                lstreakmag = abs(lstreak)
-                s = Streak(team_name, team_df, lstreakmag, lstreak_end_day)
-                lstreaks.append((lstreakmag, this_season, s))
+                wstreak = max(summary)
+                wstreak_end_days = list(team_df.loc[summary.loc[summary==max(summary)].index]['day'].values)
+                for wstreak_end_day in wstreak_end_days:
+                    s = Streak(team_name, team_df, wstreak, wstreak_end_day)
+                    wstreaks.append((wstreak, this_season, s))
 
-        # Get length of record winning streaks for this season
-        wstreaks_this_season = [j for j in wstreaks if j[1]==this_season]
-        wstreaks_this_season.sort(key=lambda x: x[2].team_name)
-        wstreaks_record_season = max(set([j[0] for j in wstreaks_this_season]))
-        # Print out each one
-        for w in wstreaks_this_season:
-            if w[0]==wstreaks_record_season:
-                wtb += str(w[2])
+                lstreak = min(summary)
+                lstreak_end_days = list(team_df.loc[summary.loc[summary==min(summary)].index]['day'].values)
+                for lstreak_end_day in lstreak_end_days:
+                    lstreakmag = abs(lstreak)
+                    s = Streak(team_name, team_df, lstreakmag, lstreak_end_day)
+                    lstreaks.append((lstreakmag, this_season, s))
 
-        # Get length of record losing streaks for this season
-        lstreaks_this_season = [j for j in lstreaks if j[1]==this_season]
-        lstreaks_this_season.sort(key=lambda x: x[2].team_name)
-        lstreaks_record_season = max(set([j[0] for j in lstreaks_this_season]))
-        # Print out each one
-        for lo in lstreaks_this_season:
-            if lo[0]==lstreaks_record_season:
-                ltb += str(lo[2])
+            # Get length of record winning streaks for this season
+            wstreaks_this_season = [j for j in wstreaks if j[1]==this_season]
+            wstreaks_this_season.sort(key=lambda x: x[0], reverse=True)
+            wstreaks_record_season = max(set([j[0] for j in wstreaks_this_season]))
+            # Print out each one
+            for w in wstreaks_this_season:
+                if w[0]==wstreaks_record_season:
+                    wtb += str(w[2])
 
-    tf = "|}"
+            # Get length of record losing streaks for this season
+            lstreaks_this_season = [j for j in lstreaks if j[1]==this_season]
+            lstreaks_this_season.sort(key=lambda x: x[0], reverse=True)
+            lstreaks_record_season = max(set([j[0] for j in lstreaks_this_season]))
+            # Print out each one
+            for lo in lstreaks_this_season:
+                if lo[0]==lstreaks_record_season:
+                    ltb += str(lo[2])
 
-    print("\n\n\n= Winning Streaks =\n")
-    print(th)
-    print(wtb)
-    print(tf)
+        tf = "|}\n\n"
 
-    print("\n\n\n= Losing Streaks =\n")
-    print(th)
-    print(ltb)
-    print(tf)
+        print("\n= Winning Streaks =\n\n", file=f)
+        print("This table lists the longest winning streak(s) for each season.\n\n", file=f)
+        print(th,  file=f)
+        print(wtb, file=f)
+        print(tf,  file=f)
 
+        print("\n= Losing Streaks =\n\n", file=f)
+        print("This table lists the longest losing streak(s) for each season.\n\n", file=f)
+        print(th,  file=f)
+        print(ltb, file=f)
+        print(tf,  file=f)
+
+        af = ""
+        af += "{{Navbox stlats}}\n\n"
+        af += "[[Category:Stlats]]\n"
+        af += "[[Category:Update Each Season]]\n"
+
+        print(af, file=f)
+
+    print("streaks.txt done")
 
 if __name__ == "__main__":
     main()
