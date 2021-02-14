@@ -110,11 +110,7 @@ def main():
         th += "!Series W-L"
         th += "!League\n"
 
-        tf  = "|}\n"
-
-        print("= Hellmouth Cup Champions =", file=f)
-        print("", file=f)
-        print("The table below provides a season by season list of [[Hellmouth Cup]] champions.", file=f)
+        tf = "|}<noinclude>\n[[Category:Hellmouth Cup]]]\nCategory:Update Each Season]]\n[[Category:Leagues Table Template]]\n</noinclude>\n"
 
         tb = ""
 

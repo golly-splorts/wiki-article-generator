@@ -114,25 +114,27 @@ def main():
     # Sort by season
     pennant_winners.sort(key=lambda x: x[0])
 
-    with open("pennants.txt", "w") as f:
+    for league in leagues:
+        league_prefix = league.split(" ")[0]
 
-        th = ""
-        th += "{| class=\"wikitable\"\n"
-        th += "|-\n"
-        th += "!Season\n"
-        th += "!League Pennant Winner\n"
+        filename = f"pennants_{league_prefix.lower()}.txt"
 
-        tf  = "|}\n"
+        with open(filename, "w") as f:
 
-        print("= League Pennants =", file=f)
-        print("", file=f)
-        print("The teams that finish at the top of their league win a League Pennant and a spot in the [[Hellmouth Cup]].", file=f)
-        print("", file=f)
-        print("The following tables list league pennant winners for each season for the Hot and Cold Leagues:", file=f)
-        print("", file=f)
+            th = ""
+            th += "{| class=\"wikitable\"\n"
+            th += "|-\n"
+            th += "!Season\n"
+            th += "!League Pennant Winner\n"
 
-        for league in leagues:
-            league_prefix = league.split(" ")[0]
+            tf  = "|}<noinclude>\n[[Category:Hellmouth Cup]]\n[[Category:Update Each Season]]\n[[Category:Leagues Table Template]]</noinclude>"
+
+            print("= League Pennants =", file=f)
+            print("", file=f)
+            print("The teams that finish at the top of their league win a League Pennant and a spot in the [[Hellmouth Cup]].", file=f)
+            print("", file=f)
+            print("The following tables list league pennant winners for each season for the Hot and Cold Leagues:", file=f)
+            print("", file=f)
 
             tb = ""
 
@@ -148,12 +150,11 @@ def main():
                 tb += f"| [[Season {this_season+1}|S{this_season+1}]]\n"
                 tb += f"| style=\"font-weight:bold; text-align:center; background-color:{{{{TeamAbbrToHexColor|{seed_abbr}}}}}; color:#272B30;\" | {seed_name} (#{seed_rank})\n"
 
-            print(f"== {league_prefix}  ==\n", file=f)
             print(th, file=f)
             print(tb, file=f)
             print(tf, file=f)
 
-    print("pennants.txt done")
+        print(f"{filename} done")
 
 
 if __name__ == "__main__":
