@@ -91,10 +91,16 @@ def main():
                         seed_wl = ""
                         for final_game in final_day:
                             if final_game['team1Name']==seed_name:
-                                seed_wl = f"{final_game['team1WinLoss'][0]}-{final_game['team1WinLoss'][1]}"
+                                if final_game['team1Score']>final_game['team2Score']:
+                                    seed_wl = f"{final_game['team1WinLoss'][0]+1}-{final_game['team1WinLoss'][1]}"
+                                else:
+                                    seed_wl = f"{final_game['team1WinLoss'][0]}-{final_game['team1WinLoss'][1]+1}"
                                 break
                             elif final_game['team2Name']==seed_name:
-                                seed_wl = f"{final_game['team2WinLoss'][0]}-{final_game['team2WinLoss'][1]}"
+                                if final_game['team2Score']>final_game['team1Score']:
+                                    seed_wl = f"{final_game['team2WinLoss'][0]+1}-{final_game['team2WinLoss'][1]}"
+                                else:
+                                    seed_wl = f"{final_game['team2WinLoss'][0]}-{final_game['team2WinLoss'][1]+1}"
                                 break
 
                         seed_rank = i+1
@@ -125,7 +131,7 @@ def main():
                 th += "!Division Title Winner\n"
                 th += "!Season W-L Record\n"
 
-                tf = "|}<noinclude>\n[[Category:Hellmouth Cup]]]\nCategory:Update Each Season]]\n[[Category:Leagues Table Template]]\n</noinclude>\n"
+                tf = "|}<noinclude>\n[[Category:Hellmouth Cup]]\n[[Category:Update Each Season]]\n[[Category:Leagues Table Template]]\n</noinclude>\n"
 
 
                 tb = ""

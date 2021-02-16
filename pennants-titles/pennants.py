@@ -129,13 +129,6 @@ def main():
 
             tf  = "|}<noinclude>\n[[Category:Hellmouth Cup]]\n[[Category:Update Each Season]]\n[[Category:Leagues Table Template]]</noinclude>"
 
-            print("= League Pennants =", file=f)
-            print("", file=f)
-            print("The teams that finish at the top of their league win a League Pennant and a spot in the [[Hellmouth Cup]].", file=f)
-            print("", file=f)
-            print("The following tables list league pennant winners for each season for the Hot and Cold Leagues:", file=f)
-            print("", file=f)
-
             tb = ""
 
             # Already sorted by season
