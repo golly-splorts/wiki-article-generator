@@ -11,7 +11,7 @@ from pprint import pprint
 
 
 API_URL = "https://api.golly.life"
-LAST_SEASON = 9
+LAST_SEASON = 11
 DAYS_PER_SEASON = 49
 
 
