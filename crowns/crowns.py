@@ -48,6 +48,7 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df):
 
     # Print table header
     th = ""
+    th += "= Season by Season Results =\n\n"
     th += '{| class="wikitable" style="text-align:center;" width="60%"\n'
     th += "|-\n"
 
@@ -122,7 +123,8 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df):
 
 
     tf = "|}\n\n"
-    tf += "[[Category:Crown]]]\n"
+    tf += "{{Navbox crown}}\n\n"
+    tf += "[[Category:Crown]]\n"
     tf += "[[Category:Update Each Season]]\n"
     tf += f"[[Category:{teama_abbr.upper()}]]\n"
     tf += f"[[Category:{teamb_abbr.upper()}]]\n"
@@ -229,6 +231,18 @@ def main():
             )
         )
     print('midwest_crown.txt done')
+
+    with open('saltonsea_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Tucson Butchers",
+                "TB",
+                "Long Beach Flightless Birds",
+                "LBFB", 
+                all_df
+            )
+        )
+    print('saltonsea_crown.txt done')
 
 
 if __name__ == "__main__":

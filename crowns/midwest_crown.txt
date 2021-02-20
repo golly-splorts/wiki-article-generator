@@ -1,3 +1,5 @@
+= Season by Season Results =
+
 {| class="wikitable" style="text-align:center;" width="60%"
 |-
 ! colspan=4 | {{Team|MILF|link=false|color=true}} vs. {{Team|DET|link=false|color=true}}
@@ -10,55 +12,57 @@
 | [[Season 1|S1]]
 | {{TeamLogo|MILF}} 3 - 5 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 1011 - 1111 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color: #272B30;" | Detroit Grape Chews
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |-
 | [[Season 2|S2]]
 | {{TeamLogo|MILF}} 1 - 1 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 189 - 335 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color: #272B30;" | Detroit Grape Chews
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |-
 | [[Season 3|S3]]
 | {{TeamLogo|MILF}} 4 - 2 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 943 - 584 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |-
 | [[Season 4|S4]]
 | {{TeamLogo|MILF}} 2 - 4 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 982 - 863 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color: #272B30;" | Detroit Grape Chews
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |-
 | [[Season 5|S5]]
 | {{TeamLogo|MILF}} 2 - 0 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 495 - 66 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |-
 | [[Season 6|S6]]
 | {{TeamLogo|MILF}} 5 - 5 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 1065 - 1482 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color: #272B30;" | Detroit Grape Chews
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |-
 | [[Season 7|S7]]
 | {{TeamLogo|MILF}} 4 - 2 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 703 - 712 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |-
 | [[Season 8|S8]]
 | {{TeamLogo|MILF}} 6 - 4 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 1449 - 1004 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |-
 | [[Season 9|S9]]
 | {{TeamLogo|MILF}} 6 - 4 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 1302 - 1261 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |-
 | [[Season 10|S10]]
 | {{TeamLogo|MILF}} 4 - 2 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 979 - 644 {{TeamLogo|DET}}
-| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color: #272B30;" | Milwaukee Flamingos
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |}
 
-[[Category:Crown]]]
+{{Navbox crown}}
+
+[[Category:Crown]]
 [[Category:Update Each Season]]
 [[Category:MILF]]
 [[Category:DET]]
