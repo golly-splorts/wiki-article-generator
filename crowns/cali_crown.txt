@@ -10,8 +10,8 @@
 !Crown Winner
 |-
 | [[Season 1|S1]]
-| {{TeamLogo|SFBS}} 4 - 2 {{TeamLogo|SAC}}
-| {{TeamLogo|SFBS}} 873 - 431 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 7 - 4 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1428 - 999 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
 |-
 | [[Season 2|S2]]
@@ -58,6 +58,16 @@
 | {{TeamLogo|SFBS}} 9 - 3 {{TeamLogo|SAC}}
 | {{TeamLogo|SFBS}} 1842 - 1120 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 11|S11]]
+| {{TeamLogo|SFBS}} 0 - 4 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 370 - 845 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 12|S12]]
+| {{TeamLogo|SFBS}} 7 - 9 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 2154 - 2912 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
 |}
 
 {{Navbox crown}}

@@ -15,8 +15,8 @@
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |-
 | [[Season 2|S2]]
-| {{TeamLogo|EA}} 6 - 3 {{TeamLogo|TB}}
-| {{TeamLogo|EA}} 1575 - 882 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 9 - 4 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 2114 - 1263 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |-
 | [[Season 3|S3]]
@@ -55,8 +55,18 @@
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |-
 | [[Season 10|S10]]
-| {{TeamLogo|EA}} 2 - 2 {{TeamLogo|TB}}
-| {{TeamLogo|EA}} 508 - 732 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 4 - 5 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1068 - 1453 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 11|S11]]
+| {{TeamLogo|EA}} 7 - 3 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1586 - 892 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
+|-
+| [[Season 12|S12]]
+| {{TeamLogo|EA}} 1 - 3 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 461 - 706 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
 |}
 

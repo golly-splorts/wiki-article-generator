@@ -15,8 +15,8 @@
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
 |-
 | [[Season 2|S2]]
-| {{TeamLogo|BTX}} 1 - 4 {{TeamLogo|FWPT}}
-| {{TeamLogo|BTX}} 566 - 917 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 4 - 5 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1226 - 1231 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
 |-
 | [[Season 3|S3]]
@@ -57,6 +57,16 @@
 | [[Season 10|S10]]
 | {{TeamLogo|BTX}} 4 - 4 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 779 - 1167 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 11|S11]]
+| {{TeamLogo|BTX}} 2 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 737 - 942 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 12|S12]]
+| {{TeamLogo|BTX}} 5 - 7 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1360 - 2059 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
 |}
 

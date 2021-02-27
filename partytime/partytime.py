@@ -5,13 +5,8 @@ import numpy as np
 from pprint import pprint
 
 
-####################
-# this is all messed up
-####################
-
-
 API_URL = "https://api.golly.life"
-LAST_SEASON = 11
+LAST_SEASON = 12
 DAYS_PER_SEASON = 49
 
 
@@ -20,7 +15,7 @@ def get_endpoint_json(endpoint):
     response = requests.get(url)
     if response.status_code != 200:
         raise Exception(
-            f"Error fetching data from {url}: returned code {response.code}"
+            f"Error fetching data from {url}: returned code {response.status_code}"
         )
     return response.json()
 
@@ -107,7 +102,7 @@ def main():
     with open(filename, 'w') as f:
 
         th = ""
-        th += "= Partytime Runs =\n\n"
+        th += "== Partytime Runs ==\n\n"
         th += "Related: [[Partytime Clomputations]]\n\n"
         th += "'''Partytime''' refers to the state of being mathematically eliminated from the possibility of playing in the postseason.\n\n"
         th += "{| class=\"wikitable\"\n"
@@ -120,12 +115,11 @@ def main():
 
         tf = "|}"
 
-        cats = "\n[[Category:Update Each Season]]\n[[Category:Stlats]]\n"
+        cats = "\n{{Navbox stlats}}\n\n[[Category:Update Each Season]]\n"
 
         print(th, file=f)
 
-        #for this_season in [LAST_SEASON]:
-        for this_season in range(LAST_SEASON+1):
+        for this_season in range(LAST_SEASON):
 
             if this_season != 0:
                 # Add inter-season spacers

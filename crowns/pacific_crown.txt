@@ -25,8 +25,8 @@
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
 |-
 | [[Season 4|S4]]
-| {{TeamLogo|LBFB}} 2 - 2 {{TeamLogo|SDBA}}
-| {{TeamLogo|LBFB}} 484 - 386 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 5 - 4 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1095 - 934 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |-
 | [[Season 5|S5]]
@@ -57,6 +57,16 @@
 | [[Season 10|S10]]
 | {{TeamLogo|LBFB}} 4 - 4 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 1074 - 972 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 11|S11]]
+| {{TeamLogo|LBFB}} 9 - 1 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1830 - 1134 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 12|S12]]
+| {{TeamLogo|LBFB}} 7 - 6 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1663 - 1844 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
