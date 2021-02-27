@@ -53,7 +53,7 @@ def main():
     maps.sort(key = lambda x : x['mapName'])
 
 
-    with open('hiscore.txt', 'w') as f:
+    with open('loscore.txt', 'w') as f:
 
         post4_all_df = pd.DataFrame()
 
@@ -66,6 +66,7 @@ def main():
                 for game in day:
                     # Filter the WinLoss fields, since they aren't used and complicate the pandas import
                     game = {k: v for k, v in game.items() if 'WinLoss' not in k}
+                    game['totalScore'] = game['team1Score'] + game['team2Score']
                     if game['team1Score'] > game['team2Score']:
                         game['winningTeamName'] = game['team1Name']
                         game['losingTeamName'] = game['team2Name']
@@ -87,6 +88,7 @@ def main():
                 for day in miniseries:
                     for game in day:
                         game = {k: v for k, v in game.items() if "WinLoss" not in k}
+                        game['totalScore'] = game['team1Score'] + game['team2Score']
                         if game["team1Score"] > game["team2Score"]:
                             game["winningTeamName"] = game["team1Name"]
                             game["losingTeamName"] = game["team2Name"]
@@ -101,7 +103,7 @@ def main():
                         game_df = pd.DataFrame(game, index=[0])
                         post4_all_df = post4_all_df.append(game_df, ignore_index=True)
 
-        post4_all_df = post4_all_df.sort_values('winningTeamScore', ascending=False)
+        post4_all_df = post4_all_df.sort_values('totalScore', ascending=True)
 
         th = ""
         th += "{| class=\"wikitable\"\n"
@@ -139,9 +141,9 @@ def main():
         tf = "|}\n\n"
         tf += "* = Postseason game\n\n"
 
-        print("= High Score =", file=f)
+        print("= Low Score =", file=f)
         print("", file=f)
-        print("A table of the all-time highest-scoring Golly games.", file=f)
+        print("A table of the all-time lowest-scoring Golly games.", file=f)
         print("", file=f)
         print("Games occuring during Seasons 1-3 were plagued by the [[Season 3/Fixing Scandal|Season 3 Hellmouth Cup Fixing Scandal]] bug,", file=f)
         print("so they are listed separately.", file=f)
@@ -168,6 +170,7 @@ def main():
                 for game in day:
                     # Filter the WinLoss fields, since they aren't used and complicate the pandas import
                     game = {k: v for k, v in game.items() if 'WinLoss' not in k}
+                    game['totalScore'] = game['team1Score'] + game['team2Score']
                     if game['team1Score'] > game['team2Score']:
                         game['winningTeamName'] = game['team1Name']
                         game['losingTeamName'] = game['team2Name']
@@ -189,6 +192,7 @@ def main():
                 for day in miniseries:
                     for game in day:
                         game = {k: v for k, v in game.items() if "WinLoss" not in k}
+                        game['totalScore'] = game['team1Score'] + game['team2Score']
                         if game["team1Score"] > game["team2Score"]:
                             game["winningTeamName"] = game["team1Name"]
                             game["losingTeamName"] = game["team2Name"]
@@ -203,7 +207,7 @@ def main():
                         game_df = pd.DataFrame(game, index=[0])
                         pre4_all_df = pre4_all_df.append(game_df, ignore_index=True)
 
-        pre4_all_df = pre4_all_df.sort_values('winningTeamScore', ascending=False)
+        pre4_all_df = pre4_all_df.sort_values('totalScore', ascending=True)
 
         th = ""
         th += "{| class=\"wikitable\"\n"
@@ -250,7 +254,7 @@ def main():
         print(tb, file=f)
         print(tf, file=f)
 
-    print("hiscore.txt done")
+    print("loscore.txt done")
 
 
 if __name__ == "__main__":

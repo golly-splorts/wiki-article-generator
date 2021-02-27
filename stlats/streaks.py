@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://api.golly.life"
-LAST_SEASON = 11
+LAST_SEASON = 12
 
 
 def get_endpoint_json(endpoint):
@@ -35,6 +35,12 @@ def get_season(season):
     endpoint = f"/season/{season}"
     s = get_endpoint_json(endpoint)
     return s
+
+
+def get_postseason(season):
+    endpoint = f"/postseason/{season}"
+    p = get_endpoint_json(endpoint)
+    return p
 
 
 def streak_summary(team_name, team_df):
@@ -154,15 +160,23 @@ def main():
         lstreaks = []
         for this_season in range(LAST_SEASON):
             season_dat = get_season(this_season)
-            season_df = pd.DataFrame()
+            postseason_dat = get_postseason(this_season)
+
+            games_df = pd.DataFrame()
             for day in season_dat:
                 for game in day:
                     # Filter the WinLoss fields, since they aren't used and complicate the pandas import
                     game = {k: v for k, v in game.items() if 'WinLoss' not in k}
-                    # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
                     game_df = pd.DataFrame(game, index=[0])
-                    # aaaand then we just ignore it again
-                    season_df = season_df.append(game_df, ignore_index=True)
+                    games_df = games_df.append(game_df, ignore_index=True)
+
+            for series in postseason_dat:
+                miniseries = postseason_dat[series]
+                for day in miniseries:
+                    for game in day:
+                        game = {k: v for k, v in game.items() if "WinLoss" not in k}
+                        game_df = pd.DataFrame(game, index=[0])
+                        games_df = games_df.append(game_df, ignore_index=True)
 
             team_dfs = {}
             for iL, league in enumerate(leagues):
@@ -170,7 +184,7 @@ def main():
                     division_teams = [team for team in teams if team['division']==division and team['league']==league]
                     for iT, division_team in enumerate(division_teams):
                         team_name = division_team['teamName']
-                        team_df = season_df.loc[(season_df['team1Name']==team_name) | (season_df['team2Name']==team_name)]
+                        team_df = games_df.loc[(games_df['team1Name']==team_name) | (games_df['team2Name']==team_name)]
                         team_dfs[team_name] = team_df
 
             for team in teams:

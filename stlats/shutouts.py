@@ -4,7 +4,7 @@ import pandas as pd
 
 
 API_URL = "https://api.golly.life"
-LAST_SEASON = 11
+LAST_SEASON = 12
 
 
 def get_endpoint_json(endpoint):
@@ -34,6 +34,12 @@ def get_season(season):
     endpoint = f"/season/{season}"
     s = get_endpoint_json(endpoint)
     return s
+
+
+def get_postseason(season):
+    endpoint = f"/postseason/{season}"
+    p = get_endpoint_json(endpoint)
+    return p
 
 
 def main():
@@ -73,6 +79,8 @@ def main():
             all_df = pd.DataFrame()
 
             season_dat = get_season(this_season)
+            postseason_dat = get_postseason(this_season)
+
             for day in season_dat:
                 for game in day:
                     # Filter the WinLoss fields, since they aren't used and complicate the pandas import
@@ -89,12 +97,30 @@ def main():
                         game['losingTeamScore'] = game['team1Score']
 
                     if game['losingTeamScore']==0:
-                        # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
                         game_df = pd.DataFrame(game, index=[0])
-                        # aaaand then we just ignore it again
                         all_df = all_df.append(game_df, ignore_index=True)
 
-            all_df.sort_values('winningTeamScore', ascending=False)
+            for series in postseason_dat:
+                miniseries = postseason_dat[series]
+                for day in miniseries:
+                    for game in day:
+                        game = {k: v for k, v in game.items() if "WinLoss" not in k}
+                        if game["team1Score"] > game["team2Score"]:
+                            game["winningTeamName"] = game["team1Name"]
+                            game["losingTeamName"] = game["team2Name"]
+                            game["winningTeamScore"] = game["team1Score"]
+                            game["losingTeamScore"] = game["team2Score"]
+                        else:
+                            game["winningTeamName"] = game["team2Name"]
+                            game["losingTeamName"] = game["team1Name"]
+                            game["winningTeamScore"] = game["team2Score"]
+                            game["losingTeamScore"] = game["team1Score"]
+
+                        if game['losingTeamScore']==0:
+                            game_df = pd.DataFrame(game, index=[0])
+                            all_df = all_df.append(game_df, ignore_index=True)
+
+            all_df = all_df.sort_values('winningTeamScore', ascending=False)
 
             for i, row in all_df.iterrows():
                 season = row['season']
@@ -106,7 +132,10 @@ def main():
                 game_id = row['id']
                 tb += "|-\n"
                 tb += f"| [[Season {season+1}|S{season+1}]]\n"
-                tb += f"| {day+1}\n"
+                if day+1 > 49:
+                    tb += f"| {day+1}*\n"
+                else:
+                    tb += f"| {day+1}\n"
                 tb += f"| [[{wteam}]]\n"
                 tb += f"| {wscore}\n"
                 tb += f"| {lscore}\n"
