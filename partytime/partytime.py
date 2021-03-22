@@ -5,8 +5,8 @@ import numpy as np
 from pprint import pprint
 
 
-API_URL = "https://api.golly.life"
-LAST_SEASON = 12
+API_URL = "https://cloud.golly.life"
+LAST_SEASON = 15
 DAYS_PER_SEASON = 49
 
 
@@ -20,8 +20,8 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = "/teams"
+def get_teams(this_season):
+    endpoint = f"/teams/{this_season}"
     teams = get_endpoint_json(endpoint)
     return teams
 
@@ -50,7 +50,7 @@ def find_game_id(team_name, day, season_dat):
     today_games = season_dat[day]
     for game in today_games:
         if game["team1Name"] == team_name or game["team2Name"] == team_name:
-            return game["id"]
+            return game["gameid"]
     return None
 
 
@@ -88,24 +88,14 @@ def get_abbr_from_team_name(team_name, teams):
 
 def main():
 
-    teams = get_teams()
-    teams.sort(key=lambda x: x["teamName"])
-    team_names = [t["teamName"] for t in teams]
-
-    divisions = sorted(list(set([j["division"] for j in teams])))
-    leagues = sorted(list(set([j["league"] for j in teams])))
-
-    maps = get_maps()
-    maps.sort(key=lambda x: x["mapName"])
-
     filename = "partytime.txt"
-    with open(filename, 'w') as f:
+    with open(filename, "w") as f:
 
         th = ""
         th += "== Partytime Runs ==\n\n"
         th += "Related: [[Partytime Clomputations]]\n\n"
         th += "'''Partytime''' refers to the state of being mathematically eliminated from the possibility of playing in the postseason.\n\n"
-        th += "{| class=\"wikitable\"\n"
+        th += '{| class="wikitable"\n'
         th += "|-\n"
         th += "!Season\n"
         th += "!Day\n"
@@ -121,11 +111,23 @@ def main():
 
         for this_season in range(LAST_SEASON):
 
+            teams = get_teams(this_season)
+            teams.sort(key=lambda x: x["teamName"])
+            team_names = [t["teamName"] for t in teams]
+
+            divisions = sorted(list(set([j["division"] for j in teams])))
+            leagues = sorted(list(set([j["league"] for j in teams])))
+
+            maps = get_maps(this_season)
+            maps.sort(key=lambda x: x["mapName"])
+
+
             if this_season != 0:
                 # Add inter-season spacers
                 print("|-", file=f)
-                print("| colspan=\"5\" style=\"background-color: #181c21;\" | &nbsp;", file=f)
-
+                print(
+                    '| colspan="5" style="background-color: #181c21;" | &nbsp;', file=f
+                )
 
             # We will add multiple rows below, so collect the parts of the table they share
             seasonrow_shared = ""
@@ -187,8 +189,12 @@ def main():
                                 elif game["team2Score"] > game["team1Score"]:
                                     w2add = 1
 
-                                abbr1 = get_abbr_from_team_name(game["team1Name"], teams)
-                                abbr2 = get_abbr_from_team_name(game["team2Name"], teams)
+                                abbr1 = get_abbr_from_team_name(
+                                    game["team1Name"], teams
+                                )
+                                abbr2 = get_abbr_from_team_name(
+                                    game["team2Name"], teams
+                                )
 
                                 winkey1 = abbr1
                                 winval1 = game["team1WinLoss"][0] + w1add
@@ -202,7 +208,9 @@ def main():
                         # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
                         lastrecord_df = pd.DataFrame(last_day_records, index=[0])
                         # aaaand then we just ignore it again
-                        all_records = all_records.append(lastrecord_df, ignore_index=True)
+                        all_records = all_records.append(
+                            lastrecord_df, ignore_index=True
+                        )
 
                 ds = ["season", "day"]
                 sorted_team_columns = sorted(list(set(all_records.columns) - set(ds)))
@@ -276,9 +284,14 @@ def main():
                         divfirst_abbr = ""
                         for division_team_abbr in division_team_abbrs:
                             if division_team_abbr != team_abbr:
-                                if series[division_team_abbr + "_rank"] < divfirst_minrank:
+                                if (
+                                    series[division_team_abbr + "_rank"]
+                                    < divfirst_minrank
+                                ):
                                     # New first place in division
-                                    divfirst_minrank = series[division_team_abbr + "_rank"]
+                                    divfirst_minrank = series[
+                                        division_team_abbr + "_rank"
+                                    ]
                                     divfirst_wins = series[division_team_abbr]
                                     divfirst_abbr = division_team_abbr
 
@@ -300,7 +313,9 @@ def main():
                 partytime_nteams = (partytime_df < 0).sum(axis=1)
 
                 # Get the first day when a team is in partytime
-                partytime_first_day = min(partytime_nteams.loc[partytime_nteams > 0].index)
+                partytime_first_day = min(
+                    partytime_nteams.loc[partytime_nteams > 0].index
+                )
                 z = partytime_df.loc[partytime_first_day]
                 partytime_first_teams = list(z[z < 0].index)
 
@@ -314,25 +329,37 @@ def main():
                 for partytime_first_team in partytime_first_teams:
                     full_name = get_name_from_team_abbr(partytime_first_team, teams)
                     for game in day:
-                        if game["team1Name"] == full_name or game["team2Name"] == full_name:
-                            partytime_first_gameids.append(game["id"])
+                        if (
+                            game["team1Name"] == full_name
+                            or game["team2Name"] == full_name
+                        ):
+                            partytime_first_gameids.append(game["gameid"])
                             if game["team1Name"] == full_name:
-                                partytime_first_opponents.append(get_abbr_from_team_name(game["team2Name"], teams))
+                                partytime_first_opponents.append(
+                                    get_abbr_from_team_name(game["team2Name"], teams)
+                                )
                                 partytime_first_scores.append(
-                                    str(game["team1Score"]) + "-" + str(game["team2Score"])
+                                    str(game["team1Score"])
+                                    + "-"
+                                    + str(game["team2Score"])
                                 )
                             else:
-                                partytime_first_opponents.append(get_abbr_from_team_name(game["team1Name"], teams))
+                                partytime_first_opponents.append(
+                                    get_abbr_from_team_name(game["team1Name"], teams)
+                                )
                                 partytime_first_scores.append(
-                                    str(game["team2Score"]) + "-" + str(game["team1Score"])
+                                    str(game["team2Score"])
+                                    + "-"
+                                    + str(game["team1Score"])
                                 )
 
-
-                if partytime_first_day<DAYS_PER_SEASON:
+                if partytime_first_day < DAYS_PER_SEASON:
 
                     # Append a new row for each partytime entrant to table body
 
-                    prefix1 = f"| style=\"font-weight:bold; text-align:center; color:#272B30; "
+                    prefix1 = (
+                        f'| style="font-weight:bold; text-align:center; color:#272B30; '
+                    )
 
                     for (first_team, first_opponent, first_gameid, first_score,) in zip(
                         partytime_first_teams,
@@ -340,14 +367,14 @@ def main():
                         partytime_first_gameids,
                         partytime_first_scores,
                     ):
-                        prefix2 = f"background-color:{{{{TeamAbbrToHexColor|{first_team}}}}};\" |"
+                        prefix2 = f'background-color:{{{{TeamAbbrToHexColor|{first_team}}}}};" |'
                         prefix = f"{prefix1}{prefix2}"
 
                         ptname = get_name_from_team_abbr(first_team, teams)
                         ptoppname = get_name_from_team_abbr(first_opponent, teams)
 
                         entrant_col = f"{prefix} {ptname}"
-                        game_col = f"{prefix} <span style=\"background-color: #272B30; margin: 5px;\">{{{{Game|{first_gameid}}}}}</span><br />vs {ptoppname}"
+                        game_col = f'{prefix} <span style="background-color: #272B30; margin: 5px;">{{{{Game|{first_gameid}}}}}</span><br />vs {ptoppname}'
 
                         # Shared columns
                         print(seasonrow_shared, file=f)
@@ -364,7 +391,7 @@ def main():
 
                     # Append a null row, no partytime
 
-                    prefix = f"| style=\"font-weight:bold; text-align:center; background-color:#272B30; color:#eee;\" |"
+                    prefix = f'| style="font-weight:bold; text-align:center; background-color:#272B30; color:#eee;" |'
 
                     entrant_col = f"{prefix} nO pArTyTiMe SpEeDrUnS!!1!"
                     game_col = f"{prefix} &nbsp;"
