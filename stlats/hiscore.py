@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 
 
-API_URL = "https://api.golly.life"
-LAST_SEASON = 12
+API_URL = "https://cloud.golly.life"
+LAST_SEASON = 15
 
 
 def get_endpoint_json(endpoint):
@@ -16,14 +16,14 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = '/teams'
+def get_teams(this_season):
+    endpoint = f"/teams/{this_season}"
     teams = get_endpoint_json(endpoint)
     return teams
 
 
-def get_maps():
-    endpoint = '/maps'
+def get_maps(this_season):
+    endpoint = f'/maps/{this_season}'
     maps = get_endpoint_json(endpoint)
     return maps
 
@@ -42,22 +42,21 @@ def get_postseason(season):
 
 def main():
 
-    teams = get_teams()
-    teams.sort(key = lambda x : x['teamName'])
-    team_names = [t['teamName'] for t in teams]
-
-    divisions = sorted(list(set([j['division'] for j in teams])))
-    leagues = sorted(list(set([j['league'] for j in teams])))
-
-    maps = get_maps()
-    maps.sort(key = lambda x : x['mapName'])
-
-
     with open('hiscore.txt', 'w') as f:
 
         post4_all_df = pd.DataFrame()
 
         for this_season in range(4,LAST_SEASON):
+
+            teams = get_teams(this_season)
+            teams.sort(key=lambda x: x["teamName"])
+            team_names = [t["teamName"] for t in teams]
+
+            divisions = sorted(list(set([j["division"] for j in teams])))
+            leagues = sorted(list(set([j["league"] for j in teams])))
+
+            maps = get_maps(this_season)
+            maps.sort(key=lambda x: x["mapName"])
 
             season_dat = get_season(this_season)
             postseason_dat = get_postseason(this_season)
@@ -123,7 +122,7 @@ def main():
             wscore = row['winningTeamScore']
             lteam = row['losingTeamName']
             lscore = row['losingTeamScore']
-            game_id = row['id']
+            game_id = row['gameid']
             tb += "|-\n"
             tb += f"| [[Season {season+1}|S{season+1}]]\n"
             if day+1 > 49:
@@ -160,6 +159,16 @@ def main():
         pre4_all_df = pd.DataFrame()
 
         for this_season in range(min(LAST_SEASON,4)):
+
+            teams = get_teams(this_season)
+            teams.sort(key=lambda x: x["teamName"])
+            team_names = [t["teamName"] for t in teams]
+
+            divisions = sorted(list(set([j["division"] for j in teams])))
+            leagues = sorted(list(set([j["league"] for j in teams])))
+
+            maps = get_maps(this_season)
+            maps.sort(key=lambda x: x["mapName"])
 
             season_dat = get_season(this_season)
             postseason_dat = get_postseason(this_season)
@@ -225,7 +234,7 @@ def main():
             wscore = row['winningTeamScore']
             lteam = row['losingTeamName']
             lscore = row['losingTeamScore']
-            game_id = row['id']
+            game_id = row['gameid']
             tb += "|-\n"
             tb += f"| [[Season {season+1}|S{season+1}]]\n"
             if day+1 > 49:
