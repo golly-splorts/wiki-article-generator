@@ -16,7 +16,7 @@ import seaborn as sns
 Season N win loss analytics using the /season endpoint of the golly.life API.
 """
 
-API_URL = "https://api.golly.life"
+API_URL = "https://cloud.golly.life"
 
 
 def usage():
@@ -252,7 +252,7 @@ def get_endpoint_json(endpoint):
     response = requests.get(url)
     if response.status_code != 200:
         raise Exception(
-            f"Error fetching data from {url}: returned code {response.code}"
+            f"Error fetching data from {url}: returned code {response.status_code}"
         )
     return response.json()
 
