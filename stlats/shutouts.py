@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 
-API_URL = "https://api.golly.life"
-LAST_SEASON = 12
+API_URL = "https://cloud.golly.life"
+LAST_SEASON = 15
 
 
 def get_endpoint_json(endpoint):
@@ -15,18 +15,15 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = '/teams'
+def get_teams(this_season):
+    endpoint = f"/teams/{this_season}"
     teams = get_endpoint_json(endpoint)
     return teams
 
 
-def get_maps(filter_new_maps = True):
-    endpoint = '/maps'
+def get_maps(this_season):
+    endpoint = f'/maps/{this_season}'
     maps = get_endpoint_json(endpoint)
-    if filter_new_maps:
-        ignore_pattern = ['spaceshipcluster', 'spaceshipcrash', 'quadjustyna', 'randompartition']
-        maps = [m for m in maps if m['patternName'] not in ignore_pattern]
     return maps
 
 
@@ -44,16 +41,6 @@ def get_postseason(season):
 
 def main():
 
-    teams = get_teams()
-    teams.sort(key = lambda x : x['teamName'])
-    team_names = [t['teamName'] for t in teams]
-
-    divisions = sorted(list(set([j['division'] for j in teams])))
-    leagues = sorted(list(set([j['league'] for j in teams])))
-
-    maps = get_maps()
-    maps.sort(key = lambda x : x['mapName'])
-
     with open('shutouts.txt', 'w') as f:
 
         print("= Shutouts =\n\n", file=f)
@@ -61,6 +48,19 @@ def main():
         print("[[Season 3/Fixing Scandal|Season 3 Hellmouth Cup Fixing Scandal]], which led to more frequent shutouts.\n\n", file=f)
 
         for this_season in range(LAST_SEASON):
+
+            teams = get_teams(this_season)
+            teams.sort(key=lambda x: x["teamName"])
+            team_names = [t["teamName"] for t in teams]
+
+            divisions = sorted(list(set([j["division"] for j in teams])))
+            leagues = sorted(list(set([j["league"] for j in teams])))
+
+            maps = get_maps(this_season)
+            maps.sort(key=lambda x: x["mapName"])
+
+            season_dat = get_season(this_season)
+            postseason_dat = get_postseason(this_season)
 
             # Print table header
             th = ""
@@ -129,7 +129,7 @@ def main():
                 wscore = row['winningTeamScore']
                 lteam = row['losingTeamName']
                 lscore = row['losingTeamScore']
-                game_id = row['id']
+                game_id = row['gameid']
                 tb += "|-\n"
                 tb += f"| [[Season {season+1}|S{season+1}]]\n"
                 if day+1 > 49:
