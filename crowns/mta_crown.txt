@@ -1,0 +1,28 @@
+= Season by Season Results =
+
+{| class="wikitable" style="text-align:center;" width="60%"
+|-
+! colspan=4 | {{Team|AA|link=false|color=true}} vs. {{Team|BB|link=false|color=true}}
+|-
+!Season
+!Wins
+!Runs
+!Crown Winner
+|-
+| [[Season 14|S14]]
+| {{TeamLogo|AA}} 8 - 5 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 1847 - 1502 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
+|-
+| [[Season 15|S15]]
+| {{TeamLogo|AA}} 4 - 5 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 1223 - 1145 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
+|}
+
+{{Navbox crown}}
+
+[[Category:Crown]]
+[[Category:Update Each Season]]
+[[Category:AA]]
+[[Category:BB]]

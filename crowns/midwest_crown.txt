@@ -68,6 +68,21 @@
 | {{TeamLogo|MILF}} 2 - 2 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 357 - 558 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
+|-
+| [[Season 13|S13]]
+| {{TeamLogo|MILF}} 4 - 2 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 1038 - 644 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
+|-
+| [[Season 14|S14]]
+| {{TeamLogo|MILF}} 4 - 3 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 912 - 700 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
+|-
+| [[Season 15|S15]]
+| {{TeamLogo|MILF}} 4 - 5 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 942 - 1241 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |}
 
 {{Navbox crown}}

@@ -68,6 +68,21 @@
 | {{TeamLogo|BTX}} 5 - 7 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 1360 - 2059 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 13|S13]]
+| {{TeamLogo|BTX}} 6 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1515 - 1043 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 14|S14]]
+| {{TeamLogo|BTX}} 5 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1341 - 1258 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 15|S15]]
+| {{TeamLogo|BTX}} 3 - 5 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 702 - 984 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
 |}
 
 {{Navbox crown}}

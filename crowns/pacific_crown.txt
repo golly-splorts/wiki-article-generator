@@ -68,6 +68,21 @@
 | {{TeamLogo|LBFB}} 7 - 6 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 1663 - 1844 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 13|S13]]
+| {{TeamLogo|LBFB}} 3 - 5 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 774 - 986 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
+|-
+| [[Season 14|S14]]
+| {{TeamLogo|LBFB}} 2 - 6 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 715 - 1205 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
+|-
+| [[Season 15|S15]]
+| {{TeamLogo|LBFB}} 4 - 4 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1318 - 971 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
 {{Navbox crown}}

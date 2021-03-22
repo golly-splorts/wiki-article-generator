@@ -68,6 +68,21 @@
 | {{TeamLogo|SFBS}} 7 - 9 {{TeamLogo|SAC}}
 | {{TeamLogo|SFBS}} 2154 - 2912 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 13|S13]]
+| {{TeamLogo|SFBS}} 5 - 5 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1381 - 1412 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 14|S14]]
+| {{TeamLogo|SFBS}} 5 - 4 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1662 - 1243 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 15|S15]]
+| {{TeamLogo|SFBS}} 1 - 5 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 579 - 1128 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
 |}
 
 {{Navbox crown}}

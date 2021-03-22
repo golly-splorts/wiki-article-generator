@@ -1,0 +1,93 @@
+= Season by Season Results =
+
+{| class="wikitable" style="text-align:center;" width="60%"
+|-
+! colspan=4 | {{Team|TB|link=false|color=true}} vs. {{Team|LBFB|link=false|color=true}}
+|-
+!Season
+!Wins
+!Runs
+!Crown Winner
+|-
+| [[Season 1|S1]]
+| {{TeamLogo|TB}} 5 - 6 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 957 - 1731 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 2|S2]]
+| {{TeamLogo|TB}} 4 - 2 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 976 - 898 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 3|S3]]
+| {{TeamLogo|TB}} 4 - 2 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 942 - 621 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 4|S4]]
+| {{TeamLogo|TB}} 4 - 4 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1323 - 860 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 5|S5]]
+| {{TeamLogo|TB}} 8 - 4 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1704 - 1061 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 6|S6]]
+| {{TeamLogo|TB}} 4 - 8 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1449 - 1676 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 7|S7]]
+| {{TeamLogo|TB}} 7 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1087 - 1173 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 8|S8]]
+| {{TeamLogo|TB}} 3 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 750 - 915 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 9|S9]]
+| {{TeamLogo|TB}} 6 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1334 - 982 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 10|S10]]
+| {{TeamLogo|TB}} 6 - 7 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1607 - 2024 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 11|S11]]
+| {{TeamLogo|TB}} 2 - 4 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 800 - 916 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 12|S12]]
+| {{TeamLogo|TB}} 0 - 6 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 638 - 1260 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 13|S13]]
+| {{TeamLogo|TB}} 3 - 5 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1042 - 1323 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 14|S14]]
+| {{TeamLogo|TB}} 5 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1374 - 797 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 15|S15]]
+| {{TeamLogo|TB}} 3 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 845 - 795 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|}
+
+{{Navbox crown}}
+
+[[Category:Crown]]
+[[Category:Update Each Season]]
+[[Category:TB]]
+[[Category:LBFB]]
