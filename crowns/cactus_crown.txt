@@ -83,6 +83,11 @@
 | {{TeamLogo|EA}} 4 - 6 {{TeamLogo|TB}}
 | {{TeamLogo|EA}} 901 - 1332 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 16|S16]]
+| {{TeamLogo|EA}} 7 - 1 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1372 - 1069 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |}
 
 {{Navbox crown}}

@@ -83,6 +83,11 @@
 | {{TeamLogo|TB}} 3 - 3 {{TeamLogo|LBFB}}
 | {{TeamLogo|TB}} 845 - 795 {{TeamLogo|LBFB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 16|S16]]
+| {{TeamLogo|TB}} 1 - 2 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 268 - 363 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
 {{Navbox crown}}

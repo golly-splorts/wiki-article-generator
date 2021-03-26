@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 15
+LAST_SEASON = 16
 
 
 def get_endpoint_json(endpoint):
@@ -272,65 +272,6 @@ def main_crowns():
         )
     print('saltonsea_crown.txt done')
 
-
-def mta_crown():
-    teams = get_teams()
-    teams.sort(key=lambda x: x["teamName"])
-    team_names = [t["teamName"] for t in teams]
-
-    divisions = sorted(list(set([j["division"] for j in teams])))
-    leagues = sorted(list(set([j["league"] for j in teams])))
-
-    ##################################################
-    # crown table
-
-    all_df = pd.DataFrame()
-
-    for this_season in range(13, LAST_SEASON):
-
-        season_dat = get_season(this_season)
-        postseason_dat = get_postseason(this_season)
-
-        for day in season_dat:
-            for game in day:
-                # Filter the WinLoss fields, since they aren't used and complicate the pandas import
-                game = {k: v for k, v in game.items() if "WinLoss" not in k}
-                if game["team1Score"] > game["team2Score"]:
-                    game["winningTeamName"] = game["team1Name"]
-                    game["losingTeamName"] = game["team2Name"]
-                    game["winningTeamScore"] = game["team1Score"]
-                    game["losingTeamScore"] = game["team2Score"]
-                else:
-                    game["winningTeamName"] = game["team2Name"]
-                    game["losingTeamName"] = game["team1Name"]
-                    game["winningTeamScore"] = game["team2Score"]
-                    game["losingTeamScore"] = game["team1Score"]
-
-                # index=[0] necessary so we don't have to change {'a': 1} to {'a': [1]}
-                game_df = pd.DataFrame(game, index=[0])
-                # aaaand then we just ignore it again
-                all_df = all_df.append(game_df, ignore_index=True)
-
-        for series in postseason_dat:
-            miniseries = postseason_dat[series]
-            for day in miniseries:
-                for game in day:
-                    game = {k: v for k, v in game.items() if "WinLoss" not in k}
-                    if game["team1Score"] > game["team2Score"]:
-                        game["winningTeamName"] = game["team1Name"]
-                        game["losingTeamName"] = game["team2Name"]
-                        game["winningTeamScore"] = game["team1Score"]
-                        game["losingTeamScore"] = game["team2Score"]
-                    else:
-                        game["winningTeamName"] = game["team2Name"]
-                        game["losingTeamName"] = game["team1Name"]
-                        game["winningTeamScore"] = game["team2Score"]
-                        game["losingTeamScore"] = game["team1Score"]
-
-                    game_df = pd.DataFrame(game, index=[0])
-                    all_df = all_df.append(game_df, ignore_index=True)
-
-
     with open('mta_crown.txt', 'w') as f:
         f.write(
             get_table_text(
@@ -346,5 +287,4 @@ def mta_crown():
 
 
 if __name__ == "__main__":
-    main()
-    mta_crown()
+    main_crowns()

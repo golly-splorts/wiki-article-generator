@@ -18,6 +18,11 @@
 | {{TeamLogo|AA}} 4 - 5 {{TeamLogo|BB}}
 | {{TeamLogo|AA}} 1223 - 1145 {{TeamLogo|BB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
+|-
+| [[Season 16|S16]]
+| {{TeamLogo|AA}} 8 - 4 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 1858 - 1243 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
 |}
 
 {{Navbox crown}}

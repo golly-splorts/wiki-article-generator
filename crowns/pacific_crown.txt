@@ -83,6 +83,11 @@
 | {{TeamLogo|LBFB}} 4 - 4 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 1318 - 971 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 16|S16]]
+| {{TeamLogo|LBFB}} 1 - 1 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 133 - 245 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
 |}
 
 {{Navbox crown}}

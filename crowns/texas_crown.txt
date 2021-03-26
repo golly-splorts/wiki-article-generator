@@ -83,6 +83,11 @@
 | {{TeamLogo|BTX}} 3 - 5 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 702 - 984 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 16|S16]]
+| {{TeamLogo|BTX}} 4 - 2 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 923 - 853 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
 |}
 
 {{Navbox crown}}

@@ -83,6 +83,11 @@
 | {{TeamLogo|MILF}} 4 - 5 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 942 - 1241 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
+|-
+| [[Season 16|S16]]
+| {{TeamLogo|MILF}} 2 - 2 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 466 - 469 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |}
 
 {{Navbox crown}}
