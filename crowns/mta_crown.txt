@@ -23,6 +23,11 @@
 | {{TeamLogo|AA}} 8 - 4 {{TeamLogo|BB}}
 | {{TeamLogo|AA}} 1858 - 1243 {{TeamLogo|BB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
+|-
+| [[Season 17|S17]]
+| {{TeamLogo|AA}} 2 - 0 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 487 - 127 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
 |}
 
 {{Navbox crown}}

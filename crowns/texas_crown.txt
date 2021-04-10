@@ -88,6 +88,11 @@
 | {{TeamLogo|BTX}} 4 - 2 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 923 - 853 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 17|S17]]
+| {{TeamLogo|BTX}} 2 - 6 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 812 - 1562 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
 |}
 
 {{Navbox crown}}

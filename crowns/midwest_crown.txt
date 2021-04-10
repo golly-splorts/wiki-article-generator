@@ -88,6 +88,11 @@
 | {{TeamLogo|MILF}} 2 - 2 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 466 - 469 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
+|-
+| [[Season 17|S17]]
+| {{TeamLogo|MILF}} 1 - 3 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 516 - 762 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |}
 
 {{Navbox crown}}

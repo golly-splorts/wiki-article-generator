@@ -85,8 +85,13 @@
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
 |-
 | [[Season 16|S16]]
-| {{TeamLogo|SFBS}} 3 - 4 {{TeamLogo|SAC}}
-| {{TeamLogo|SFBS}} 691 - 930 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 4 - 5 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 971 - 1187 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 17|S17]]
+| {{TeamLogo|SFBS}} 2 - 2 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 565 - 610 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
 |}
 

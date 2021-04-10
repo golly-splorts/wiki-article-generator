@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 
-API_URL = "https://api.golly.life"
-LAST_SEASON = 12
+API_URL = "https://cloud.golly.life"
+LAST_SEASON = 15
 
 
 def get_endpoint_json(endpoint):
@@ -17,8 +17,8 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = "/teams"
+def get_teams(season):
+    endpoint = f"/teams/{season}"
     teams = get_endpoint_json(endpoint)
     return teams
 
@@ -71,12 +71,6 @@ def get_abbr_from_team_name(team_name, teams):
 
 def main():
 
-    teams = get_teams()
-    teams.sort(key=lambda x: x["teamName"])
-    team_names = [t["teamName"] for t in teams]
-
-    leagues = sorted(list(set([j["league"] for j in teams])))
-
     # For each season,
     # Get the teams playing in the Hellmouth Cup
     # This gives you the pennant winners for each season
@@ -85,8 +79,15 @@ def main():
 
     for this_season in range(LAST_SEASON):
 
+        teams = get_teams(this_season)
+        teams.sort(key=lambda x: x["teamName"])
+        team_names = [t["teamName"] for t in teams]
+
+        leagues = sorted(list(set([j["league"] for j in teams])))
+
+
         postseason_dat = get_postseason(this_season)
-        hc = postseason_dat["WS"]
+        hc = postseason_dat["HCS"]
         lastday = hc[-1]
         game = lastday[0]
 
@@ -175,7 +176,7 @@ def main():
             tb += f"{cprefix} {winner_name}\n"
             tb += f"{cprefix} {winner_leadiv}\n"
             tb += f"{cprefix} {winner_wl}\n"
-            tb += f"{closerprefix} {loser_name})\n"
+            tb += f"{closerprefix} {loser_name}\n"
             tb += f"{closerprefix} {loser_leadiv}\n"
 
         print(th, file=f)

@@ -4,7 +4,7 @@ import pandas as pd
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 15
+LAST_SEASON = 17
 
 
 def get_endpoint_json(endpoint):

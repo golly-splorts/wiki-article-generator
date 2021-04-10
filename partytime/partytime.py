@@ -1,3 +1,4 @@
+import time
 import requests
 import os
 import pandas as pd
@@ -6,7 +7,7 @@ from pprint import pprint
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 15
+LAST_SEASON = 17
 DAYS_PER_SEASON = 49
 
 
@@ -41,6 +42,7 @@ def get_maps(filter_new_maps=True):
 
 
 def get_season(season):
+    time.sleep(10)
     endpoint = f"/season/{season}"
     s = get_endpoint_json(endpoint)
     return s

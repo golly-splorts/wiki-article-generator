@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 
-API_URL = "https://api.golly.life"
-LAST_SEASON = 12
+API_URL = "https://cloud.golly.life"
+LAST_SEASON = 17
 
 
 def get_endpoint_json(endpoint):
@@ -15,18 +15,15 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = '/teams'
+def get_teams(which_season):
+    endpoint = f'/teams/{which_season}'
     teams = get_endpoint_json(endpoint)
     return teams
 
 
-def get_maps(filter_new_maps = True):
-    endpoint = '/maps'
+def get_maps(which_season):
+    endpoint = f'/maps/{which_season}'
     maps = get_endpoint_json(endpoint)
-    if filter_new_maps:
-        ignore_pattern = ['spaceshipcluster', 'spaceshipcrash', 'quadjustyna', 'randompartition']
-        maps = [m for m in maps if m['patternName'] not in ignore_pattern]
     return maps
 
 
@@ -64,12 +61,6 @@ def get_abbr_from_team_name(team_name, teams):
 
 def main():
 
-    teams = get_teams()
-    teams.sort(key = lambda x : x['teamName'])
-    team_names = [t['teamName'] for t in teams]
-
-    leagues = sorted(list(set([j['league'] for j in teams])))
-
     # For each season,
     # Get the teams playing in the Hellmouth Cup
     # This gives you the pennant winners for each season
@@ -78,10 +69,16 @@ def main():
 
     for this_season in range(LAST_SEASON):
 
+        teams = get_teams(this_season)
+        teams.sort(key = lambda x : x['teamName'])
+        team_names = [t['teamName'] for t in teams]
+
+        leagues = sorted(list(set([j['league'] for j in teams])))
+
         all_seeds = get_seeds(this_season)
 
         postseason_dat = get_postseason(this_season)
-        hc = postseason_dat['WS']
+        hc = postseason_dat['HCS']
         day = hc[0]
         postgame = day[0]
 
@@ -90,7 +87,7 @@ def main():
         league1, _ = get_league_division_from_team_name(team1, teams)
         team1seed = 0
         for i in range(len(all_seeds[league1])):
-            if all_seeds[league1][i]==team1:
+            if all_seeds[league1][i]['teamName']==team1:
                 team1seed = i+1
                 break
 
@@ -99,7 +96,7 @@ def main():
         league2, _ = get_league_division_from_team_name(team2, teams)
         team2seed = 0
         for i in range(len(all_seeds[league2])):
-            if all_seeds[league2][i]==team2:
+            if all_seeds[league2][i]['teamName']==team2:
                 team2seed = i+1
                 break
 

@@ -88,6 +88,11 @@
 | {{TeamLogo|EA}} 7 - 1 {{TeamLogo|TB}}
 | {{TeamLogo|EA}} 1372 - 1069 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
+|-
+| [[Season 17|S17]]
+| {{TeamLogo|EA}} 5 - 2 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1282 - 764 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |}
 
 {{Navbox crown}}

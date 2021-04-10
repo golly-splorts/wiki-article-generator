@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 
-API_URL = "https://api.golly.life"
-LAST_SEASON = 12
+API_URL = "https://cloud.golly.life"
+LAST_SEASON = 16
 
 
 def get_endpoint_json(endpoint):
@@ -15,18 +15,15 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = '/teams'
+def get_teams(which_season):
+    endpoint = f'/teams/{which_season}'
     teams = get_endpoint_json(endpoint)
     return teams
 
 
-def get_maps(filter_new_maps = True):
-    endpoint = '/maps'
+def get_maps(which_season):
+    endpoint = f'/maps/{which_season}'
     maps = get_endpoint_json(endpoint)
-    if filter_new_maps:
-        ignore_pattern = ['spaceshipcluster', 'spaceshipcrash', 'quadjustyna', 'randompartition']
-        maps = [m for m in maps if m['patternName'] not in ignore_pattern]
     return maps
 
 
@@ -58,13 +55,6 @@ def get_abbr_from_team_name(team_name, teams):
 
 def main():
 
-    teams = get_teams()
-    teams.sort(key = lambda x : x['teamName'])
-    team_names = [t['teamName'] for t in teams]
-
-    divisions = sorted(list(set([j['division'] for j in teams])))
-    leagues = sorted(list(set([j['league'] for j in teams])))
-
     # For each season,
     # Get the seeds
     # Find the first team from each particular division/league combination
@@ -75,6 +65,13 @@ def main():
 
     for this_season in range(LAST_SEASON):
 
+        teams = get_teams(this_season)
+        teams.sort(key = lambda x : x['teamName'])
+        team_names = [t['teamName'] for t in teams]
+
+        divisions = sorted(list(set([j['division'] for j in teams])))
+        leagues = sorted(list(set([j['league'] for j in teams])))
+
         season_dat = get_season(this_season)
         final_day = season_dat[-1]
 
@@ -83,7 +80,7 @@ def main():
             league_seed = all_seeds[league]
             for division in divisions:
                 for i in range(len(league_seed)):
-                    seed_name = league_seed[i]
+                    seed_name = league_seed[i]['teamName']
                     seed_league, seed_division = get_league_division_from_team_name(seed_name, teams)
                     seed_abbr = get_abbr_from_team_name(seed_name, teams)
                     if seed_league==league and seed_division==division:
