@@ -93,6 +93,11 @@
 | {{TeamLogo|LBFB}} 1 - 1 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 266 - 228 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 18|S18]]
+| {{TeamLogo|LBFB}} 2 - 2 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 425 - 490 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
 |}
 
 {{Navbox crown}}

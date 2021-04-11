@@ -93,6 +93,11 @@
 | {{TeamLogo|TB}} 2 - 6 {{TeamLogo|LBFB}}
 | {{TeamLogo|TB}} 926 - 1152 {{TeamLogo|LBFB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 18|S18]]
+| {{TeamLogo|TB}} 2 - 6 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1003 - 1233 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
 {{Navbox crown}}

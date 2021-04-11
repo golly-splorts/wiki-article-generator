@@ -28,6 +28,11 @@
 | {{TeamLogo|AA}} 2 - 0 {{TeamLogo|BB}}
 | {{TeamLogo|AA}} 487 - 127 {{TeamLogo|BB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
+|-
+| [[Season 18|S18]]
+| {{TeamLogo|AA}} 3 - 4 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 1297 - 740 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
 |}
 
 {{Navbox crown}}

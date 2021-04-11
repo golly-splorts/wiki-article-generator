@@ -93,6 +93,11 @@
 | {{TeamLogo|BTX}} 2 - 6 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 812 - 1562 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 18|S18]]
+| {{TeamLogo|BTX}} 5 - 5 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1468 - 1447 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
 |}
 
 {{Navbox crown}}

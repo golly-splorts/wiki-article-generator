@@ -93,6 +93,11 @@
 | {{TeamLogo|SFBS}} 2 - 2 {{TeamLogo|SAC}}
 | {{TeamLogo|SFBS}} 565 - 610 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 18|S18]]
+| {{TeamLogo|SFBS}} 6 - 2 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1323 - 755 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
 |}
 
 {{Navbox crown}}

@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 17
+LAST_SEASON = 18
 
 
 def get_endpoint_json(endpoint):
@@ -13,7 +13,7 @@ def get_endpoint_json(endpoint):
     response = requests.get(url)
     if response.status_code != 200:
         raise Exception(
-            f"Error fetching data from {url}: returned code {response.code}"
+            f"Error fetching data from {url}: returned code {response.status_code}"
         )
     return response.json()
 
@@ -24,17 +24,9 @@ def get_teams():
     return teams
 
 
-def get_maps(filter_new_maps=True):
-    endpoint = "/maps"
+def get_maps(season):
+    endpoint = f"/maps/{season}"
     maps = get_endpoint_json(endpoint)
-    if filter_new_maps:
-        ignore_pattern = [
-            "spaceshipcluster",
-            "spaceshipcrash",
-            "quadjustyna",
-            "randompartition",
-        ]
-        maps = [m for m in maps if m["patternName"] not in ignore_pattern]
     return maps
 
 
@@ -59,9 +51,6 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df, start
     th += "|-\n"
 
     th += f"! colspan=4 | {{{{Team|{teama_abbr}|link=false|color=true}}}} vs. {{{{Team|{teamb_abbr}|link=false|color=true}}}}\n"
-    #th += f"!{{{{Team|{teama_abbr}|link=false|color=true}}}} Wins\n"
-    #th += f"!{{{{Team|{teamb_abbr}|link=false|color=true}}}} Wins\n"
-    #th += f"!Runs ({teama_abbr} - {teamb_abbr})\n"
 
     th += "|-\n"
     th += "!Season\n"
@@ -84,48 +73,61 @@ def get_table_text(teama_name, teama_abbr, teamb_name, teamb_abbr, all_df, start
             )
         ]
 
-        def teama_runs_func(row):
-            if row['winningTeamName']==teama_name:
-                return row['winningTeamScore']
-            elif row['losingTeamName']==teama_name:
-                return row['losingTeamScore']
+        if len(filter_df)==0:
 
-        def teamb_runs_func(row):
-            if row['winningTeamName']==teamb_name:
-                return row['winningTeamScore']
-            elif row['losingTeamName']==teamb_name:
-                return row['losingTeamScore']
+            teama_wins = 0
+            teamb_wins = 0
+            teama_runs = 0
+            teamb_runs = 0
+            tb += "|-\n"
+            tb += f"| [[Season {this_season+1}|S{this_season+1}]]\n"
+            tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_wins} - {teamb_wins} {{{{TeamLogo|{teamb_abbr}}}}}\n"
+            tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_runs} - {teamb_runs} {{{{TeamLogo|{teamb_abbr}}}}}\n"
+            tb += f"| style=\"font-weight:bold; background-color:#272B30; color:#EEEEEE;\" | (No matches)\n"
 
-        teama_wins = filter_df.loc[filter_df['winningTeamName']==teama_name].shape[0]
-        teama_runs = filter_df.apply(teama_runs_func, axis=1).sum()
+            continue
 
-        teamb_wins = filter_df.loc[filter_df['winningTeamName']==teamb_name].shape[0]
-        teamb_runs = filter_df.apply(teamb_runs_func, axis=1).sum()
-
-        crown_winner = ""
-        if teama_wins > teamb_wins:
-            crown_winner = teama_name
-            crown_winner_abbr = teama_abbr
-        elif teamb_wins > teama_wins:
-            crown_winner = teamb_name
-            crown_winner_abbr = teamb_abbr
         else:
-            # tie in wins, check runs
-            if teama_runs > teamb_runs:
+
+            def teama_runs_func(row):
+                if row['winningTeamName']==teama_name:
+                    return row['winningTeamScore']
+                elif row['losingTeamName']==teama_name:
+                    return row['losingTeamScore']
+
+            def teamb_runs_func(row):
+                if row['winningTeamName']==teamb_name:
+                    return row['winningTeamScore']
+                elif row['losingTeamName']==teamb_name:
+                    return row['losingTeamScore']
+
+            teama_wins = filter_df.loc[filter_df['winningTeamName']==teama_name].shape[0]
+            teama_runs = filter_df.apply(teama_runs_func, axis=1).sum()
+
+            teamb_wins = filter_df.loc[filter_df['winningTeamName']==teamb_name].shape[0]
+            teamb_runs = filter_df.apply(teamb_runs_func, axis=1).sum()
+
+            crown_winner = ""
+            if teama_wins > teamb_wins:
                 crown_winner = teama_name
                 crown_winner_abbr = teama_abbr
-            elif teamb_runs > teama_runs:
+            elif teamb_wins > teama_wins:
                 crown_winner = teamb_name
                 crown_winner_abbr = teamb_abbr
             else:
-                crown_winner = None
-                crown_winner_abbr = None
+                # tie in wins, check runs
+                if teama_runs > teamb_runs:
+                    crown_winner = teama_name
+                    crown_winner_abbr = teama_abbr
+                elif teamb_runs > teama_runs:
+                    crown_winner = teamb_name
+                    crown_winner_abbr = teamb_abbr
 
-        tb += "|-\n"
-        tb += f"| [[Season {this_season+1}|S{this_season+1}]]\n"
-        tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_wins} - {teamb_wins} {{{{TeamLogo|{teamb_abbr}}}}}\n"
-        tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_runs} - {teamb_runs} {{{{TeamLogo|{teamb_abbr}}}}}\n"
-        tb += f"| style=\"font-weight:bold; background-color:{{{{TeamAbbrToHexColor|{crown_winner_abbr}}}}}; color:#272B30;\" | {crown_winner}\n"
+            tb += "|-\n"
+            tb += f"| [[Season {this_season+1}|S{this_season+1}]]\n"
+            tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_wins} - {teamb_wins} {{{{TeamLogo|{teamb_abbr}}}}}\n"
+            tb += f"| {{{{TeamLogo|{teama_abbr}}}}} {teama_runs} - {teamb_runs} {{{{TeamLogo|{teamb_abbr}}}}}\n"
+            tb += f"| style=\"font-weight:bold; background-color:{{{{TeamAbbrToHexColor|{crown_winner_abbr}}}}}; color:#272B30;\" | {crown_winner}\n"
 
 
     tf = "|}\n\n"
@@ -147,23 +149,49 @@ def main_crowns():
     divisions = sorted(list(set([j["division"] for j in teams])))
     leagues = sorted(list(set([j["league"] for j in teams])))
 
-    maps = get_maps()
-    maps.sort(key=lambda x: x["mapName"])
-
     ##################################################
     # crown table
 
     all_df = pd.DataFrame()
 
     for this_season in range(LAST_SEASON):
-
+        
         season_dat = get_season(this_season)
         postseason_dat = get_postseason(this_season)
 
+        maps = get_maps(this_season)
+        maps.sort(key=lambda x: x["mapName"])
+
         for day in season_dat:
             for game in day:
+
+                keep_keys = [
+                    "day",
+                    "description",
+                    "gameid",
+                    "generations",
+                    "isPostseason",
+                    "league",
+                    "mapName",
+                    "patternName",
+                    "season",
+                    "series",
+                    "team1Abbr",
+                    "team1Color",
+                    "team1Name",
+                    "team1Score",
+                    "team2Abbr",
+                    "team2Color",
+                    "team2Name",
+                    "team2Score",
+                    "winningTeamName",
+                    "losingTeamName",
+                    "winningTeamScore",
+                    "losingTeamScore",
+                ]
+
                 # Filter the WinLoss fields, since they aren't used and complicate the pandas import
-                game = {k: v for k, v in game.items() if "WinLoss" not in k}
+                game = {k: v for k, v in game.items() if k in keep_keys}
                 if game["team1Score"] > game["team2Score"]:
                     game["winningTeamName"] = game["team1Name"]
                     game["losingTeamName"] = game["team2Name"]
@@ -184,7 +212,7 @@ def main_crowns():
             miniseries = postseason_dat[series]
             for day in miniseries:
                 for game in day:
-                    game = {k: v for k, v in game.items() if "WinLoss" not in k}
+                    game = {k: v for k, v in game.items() if k in keep_keys}
                     if game["team1Score"] > game["team2Score"]:
                         game["winningTeamName"] = game["team1Name"]
                         game["losingTeamName"] = game["team2Name"]
@@ -284,6 +312,83 @@ def main_crowns():
             )
         )
     print('mta_crown.txt done')
+
+    with open('jetstream_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Elko Astronauts",
+                "EA",
+                "Salt Lake Turbulence",
+                "SLC",
+                all_df,
+                start_season = 15
+            )
+        )
+    print('jetstream_crown.txt done')
+
+    with open('invisible_hand_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Delaware Corporate Shells",
+                "DECO",
+                "Sugar Grove Eavesdroppers",
+                "SGE",
+                all_df,
+                start_season = 15
+            )
+        )
+    print('invisible_hand_crown.txt done')
+
+    with open('peppersauce_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Phoenix Freshrolls",
+                "FF",
+                "Tucson Butchers",
+                "TB",
+                all_df,
+                start_season = 15
+            )
+        )
+    print('peppersauce_crown.txt done')
+
+    with open('fresh_kicks_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Phoenix Freshrolls",
+                "FF",
+                "Seattle Sneakers",
+                "SS",
+                all_df,
+                start_season = 15
+            )
+        )
+    print('fresh_kicks_crown.txt done')
+
+    with open('flamepunk_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Albuquerque Solarpunks",
+                "ABQ",
+                "Alewife Arsonists",
+                "AA",
+                all_df,
+                start_season = 15
+            )
+        )
+    print('flamepunk_crown.txt done')
+
+    with open('highwire_crown.txt', 'w') as f:
+        f.write(
+            get_table_text(
+                "Seattle Sneakers",
+                "SS",
+                "Jersey OSHA Violations",
+                "OSHA",
+                all_df,
+            )
+        )
+    print('highwire_crown.txt done')
 
 
 if __name__ == "__main__":
