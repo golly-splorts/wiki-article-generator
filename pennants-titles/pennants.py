@@ -4,7 +4,7 @@ import pandas as pd
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 17
+LAST_SEASON = 19
 
 
 def get_endpoint_json(endpoint):
@@ -79,7 +79,10 @@ def main():
 
         postseason_dat = get_postseason(this_season)
         hc = postseason_dat['HCS']
-        day = hc[0]
+        try:
+            day = hc[0]
+        except:
+            pass
         postgame = day[0]
 
         team1 = postgame['team1Name']

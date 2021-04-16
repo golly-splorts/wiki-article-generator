@@ -5,14 +5,14 @@ import numpy as np
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 17
+LAST_SEASON = 19
 
 
 def get_endpoint_json(endpoint):
     url = API_URL + endpoint
     response = requests.get(url)
     if response.status_code != 200:
-        raise Exception(f"Error fetching data from {url}: returned code {response.code}")
+        raise Exception(f"Error fetching data from {url}: returned code {response.status_code}")
     return response.json()
 
 

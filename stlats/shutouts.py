@@ -1,17 +1,18 @@
+import time
 import requests
 import os
 import pandas as pd
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 17
+LAST_SEASON = 18
 
 
 def get_endpoint_json(endpoint):
     url = API_URL + endpoint
     response = requests.get(url)
     if response.status_code != 200:
-        raise Exception(f"Error fetching data from {url}: returned code {response.code}")
+        raise Exception(f"Error fetching data from {url}: returned code {response.status_code}")
     return response.json()
 
 
@@ -47,7 +48,9 @@ def main():
         print("NOTE: Shutouts were much more frequent during Seasons 1 through 3 due to the bug that caused the \n", file=f)
         print("[[Season 3/Fixing Scandal|Season 3 Hellmouth Cup Fixing Scandal]], which led to more frequent shutouts.\n\n", file=f)
 
-        for this_season in range(LAST_SEASON):
+        for this_season in range(LAST_SEASON+1):
+
+            print(f"Now processing season {this_season}")
 
             teams = get_teams(this_season)
             teams.sort(key=lambda x: x["teamName"])
@@ -149,6 +152,8 @@ def main():
             print(tb, file=f)
             print(tf, file=f)
 
+            time.sleep(15)
+            
         af = ""
         af += "{{Navbox stlats}}\n\n"
         af += "[[Category:Stlats]]\n"
