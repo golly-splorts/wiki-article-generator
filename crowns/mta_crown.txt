@@ -33,6 +33,16 @@
 | {{TeamLogo|AA}} 3 - 4 {{TeamLogo|BB}}
 | {{TeamLogo|AA}} 1297 - 740 {{TeamLogo|BB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|AA}} 3 - 5 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 1126 - 1317 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|AA}} 3 - 1 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 657 - 346 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
 |}
 
 {{Navbox crown}}

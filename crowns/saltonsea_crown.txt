@@ -98,6 +98,16 @@
 | {{TeamLogo|TB}} 2 - 6 {{TeamLogo|LBFB}}
 | {{TeamLogo|TB}} 1003 - 1233 {{TeamLogo|LBFB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|TB}} 1 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 526 - 576 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|TB}} 5 - 9 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1572 - 2117 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
 {{Navbox crown}}

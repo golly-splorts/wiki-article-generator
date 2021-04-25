@@ -4,7 +4,7 @@ import pandas as pd
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 19
+LAST_SEASON = 20
 
 
 def get_endpoint_json(endpoint):
@@ -79,6 +79,8 @@ def main():
 
         postseason_dat = get_postseason(this_season)
         hc = postseason_dat['HCS']
+        if len(hc)==0:
+            raise Exception("Cannot create pennant table, season is not over")
         try:
             day = hc[0]
         except:

@@ -1,3 +1,5 @@
 graphs/season*
 *.txt
 *.csv
+pwb/pywikibot
+pwb/vp

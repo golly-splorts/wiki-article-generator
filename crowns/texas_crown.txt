@@ -98,6 +98,16 @@
 | {{TeamLogo|BTX}} 5 - 5 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 1468 - 1447 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|BTX}} 5 - 6 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1471 - 1728 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|BTX}} 4 - 2 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 964 - 487 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
 |}
 
 {{Navbox crown}}

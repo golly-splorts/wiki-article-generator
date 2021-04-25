@@ -98,6 +98,16 @@
 | {{TeamLogo|SFBS}} 6 - 2 {{TeamLogo|SAC}}
 | {{TeamLogo|SFBS}} 1323 - 755 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|SFBS}} 0 - 0 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 0 - 0 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:#272B30; color:#EEEEEE;" | (No matches)
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|SFBS}} 7 - 1 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1237 - 725 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
 |}
 
 {{Navbox crown}}

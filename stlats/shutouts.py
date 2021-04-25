@@ -5,7 +5,7 @@ import pandas as pd
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 18
+LAST_SEASON = 20
 
 
 def get_endpoint_json(endpoint):
@@ -48,7 +48,7 @@ def main():
         print("NOTE: Shutouts were much more frequent during Seasons 1 through 3 due to the bug that caused the \n", file=f)
         print("[[Season 3/Fixing Scandal|Season 3 Hellmouth Cup Fixing Scandal]], which led to more frequent shutouts.\n\n", file=f)
 
-        for this_season in range(LAST_SEASON+1):
+        for this_season in range(LAST_SEASON):
 
             print(f"Now processing season {this_season}")
 

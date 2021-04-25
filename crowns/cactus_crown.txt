@@ -98,6 +98,16 @@
 | {{TeamLogo|EA}} 9 - 5 {{TeamLogo|TB}}
 | {{TeamLogo|EA}} 2031 - 1515 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|EA}} 5 - 6 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1324 - 1649 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|EA}} 4 - 2 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 698 - 564 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |}
 
 {{Navbox crown}}

@@ -98,6 +98,16 @@
 | {{TeamLogo|LBFB}} 2 - 2 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 425 - 490 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|LBFB}} 6 - 2 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1373 - 1042 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|LBFB}} 3 - 3 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 758 - 843 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
 |}
 
 {{Navbox crown}}

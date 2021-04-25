@@ -6,7 +6,7 @@ import numpy as np
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 18
+LAST_SEASON = 20
 
 
 def get_endpoint_json(endpoint):
@@ -146,7 +146,7 @@ def main():
 
         wstreaks = []
         lstreaks = []
-        for this_season in range(LAST_SEASON+1):
+        for this_season in range(LAST_SEASON):
 
             print(f"Now processing season {this_season}")
 

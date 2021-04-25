@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 19
+LAST_SEASON = 20
 
 
 def get_endpoint_json(endpoint):

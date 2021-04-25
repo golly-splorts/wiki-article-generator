@@ -98,6 +98,16 @@
 | {{TeamLogo|MILF}} 3 - 1 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 779 - 439 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
+|-
+| [[Season 19|S19]]
+| {{TeamLogo|MILF}} 1 - 4 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 434 - 684 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
+|-
+| [[Season 20|S20]]
+| {{TeamLogo|MILF}} 2 - 2 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 568 - 757 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |}
 
 {{Navbox crown}}
