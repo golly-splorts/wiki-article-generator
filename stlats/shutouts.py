@@ -5,7 +5,7 @@ import pandas as pd
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 20
+LAST_SEASON = 21
 
 
 def get_endpoint_json(endpoint):
@@ -123,33 +123,40 @@ def main():
                             game_df = pd.DataFrame(game, index=[0])
                             all_df = all_df.append(game_df, ignore_index=True)
 
-            all_df = all_df.sort_values('winningTeamScore', ascending=False)
+            if len(all_df)==0:
 
-            for i, row in all_df.iterrows():
-                season = row['season']
-                day = row['day']
-                wteam = row['winningTeamName']
-                wscore = row['winningTeamScore']
-                lteam = row['losingTeamName']
-                lscore = row['losingTeamScore']
-                game_id = row['gameid']
-                tb += "|-\n"
-                tb += f"| [[Season {season+1}|S{season+1}]]\n"
-                if day+1 > 49:
-                    tb += f"| {day+1}*\n"
-                else:
-                    tb += f"| {day+1}\n"
-                tb += f"| [[{wteam}]]\n"
-                tb += f"| {wscore}\n"
-                tb += f"| {lscore}\n"
-                tb += f"| [[{lteam}]]\n"
-                tb += f"| {{{{Game|{game_id}}}}}\n"
+                tf = "|}\n\n"
 
-            tf = "|}\n\n"
+            else:
+
+                all_df = all_df.sort_values('winningTeamScore', ascending=False)
+
+                for i, row in all_df.iterrows():
+                    season = row['season']
+                    day = row['day']
+                    wteam = row['winningTeamName']
+                    wscore = row['winningTeamScore']
+                    lteam = row['losingTeamName']
+                    lscore = row['losingTeamScore']
+                    game_id = row['gameid']
+                    tb += "|-\n"
+                    tb += f"| [[Season {season+1}|S{season+1}]]\n"
+                    if day+1 > 49:
+                        tb += f"| {day+1}*\n"
+                    else:
+                        tb += f"| {day+1}\n"
+                    tb += f"| [[{wteam}]]\n"
+                    tb += f"| {wscore}\n"
+                    tb += f"| {lscore}\n"
+                    tb += f"| [[{lteam}]]\n"
+                    tb += f"| {{{{Game|{game_id}}}}}\n"
+
+                tf = "|}\n\n"
 
             print(f"\n\n== Shutouts Season {this_season+1} ==\n", file=f)
             print(th, file=f)
-            print(tb, file=f)
+            if len(tb)>0:
+                print(tb, file=f)
             print(tf, file=f)
 
             time.sleep(15)

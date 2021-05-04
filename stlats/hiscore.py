@@ -5,7 +5,7 @@ import numpy as np
 
 
 API_URL = "https://cloud.golly.life"
-LAST_SEASON = 20
+LAST_SEASON = 21
 
 
 def get_endpoint_json(endpoint):
@@ -115,7 +115,7 @@ def main():
 
         tb = ""
 
-        for i, row in post4_all_df.head(20).iterrows():
+        for i, row in post4_all_df.head(25).iterrows():
             season = row['season']
             day = row['day']
             wteam = row['winningTeamName']
@@ -227,7 +227,7 @@ def main():
 
         tb = ""
 
-        for i, row in pre4_all_df.head(20).iterrows():
+        for i, row in pre4_all_df.head(25).iterrows():
             season = row['season']
             day = row['day']
             wteam = row['winningTeamName']
