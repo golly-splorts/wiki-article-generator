@@ -108,6 +108,11 @@
 | {{TeamLogo|MILF}} 2 - 2 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 568 - 757 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
+|-
+| [[Season 21|S21]]
+| {{TeamLogo|MILF}} 1 - 1 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 349 - 305 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
 |}
 
 {{Navbox crown}}

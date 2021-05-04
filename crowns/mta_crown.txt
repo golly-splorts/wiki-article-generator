@@ -43,6 +43,11 @@
 | {{TeamLogo|AA}} 3 - 1 {{TeamLogo|BB}}
 | {{TeamLogo|AA}} 657 - 346 {{TeamLogo|BB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
+|-
+| [[Season 21|S21]]
+| {{TeamLogo|AA}} 4 - 6 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 1354 - 1540 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
 |}
 
 {{Navbox crown}}

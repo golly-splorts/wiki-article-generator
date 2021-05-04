@@ -108,6 +108,11 @@
 | {{TeamLogo|EA}} 4 - 2 {{TeamLogo|TB}}
 | {{TeamLogo|EA}} 698 - 564 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
+|-
+| [[Season 21|S21]]
+| {{TeamLogo|EA}} 3 - 3 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 681 - 626 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
 |}
 
 {{Navbox crown}}

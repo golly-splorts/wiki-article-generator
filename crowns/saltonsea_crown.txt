@@ -108,6 +108,11 @@
 | {{TeamLogo|TB}} 5 - 9 {{TeamLogo|LBFB}}
 | {{TeamLogo|TB}} 1572 - 2117 {{TeamLogo|LBFB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 21|S21]]
+| {{TeamLogo|TB}} 2 - 4 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 732 - 946 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
 {{Navbox crown}}

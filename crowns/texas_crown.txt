@@ -108,6 +108,11 @@
 | {{TeamLogo|BTX}} 4 - 2 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 964 - 487 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 21|S21]]
+| {{TeamLogo|BTX}} 3 - 1 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 600 - 378 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
 |}
 
 {{Navbox crown}}
