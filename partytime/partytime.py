@@ -8,7 +8,7 @@ from pprint import pprint
 
 API_URL = "https://cloud.golly.life"
 DAYS_PER_SEASON = 49
-LAST_SEASON = 20
+LAST_SEASON = 21
 
 
 def get_endpoint_json(endpoint):
