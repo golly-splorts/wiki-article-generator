@@ -1,10 +1,11 @@
+import time
 import requests
 import os
 import pandas as pd
 
 
-API_URL = "https://cloud.golly.life"
-LAST_SEASON = 21
+API_URL = "https://cloud.hellmouth.golly.life"
+LAST_SEASON = 24
 
 
 def get_endpoint_json(endpoint):
@@ -64,6 +65,8 @@ def main():
     title_winners = []
 
     for this_season in range(LAST_SEASON):
+
+        time.sleep(15)
 
         teams = get_teams(this_season)
         teams.sort(key = lambda x : x['teamName'])
