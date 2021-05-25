@@ -113,6 +113,21 @@
 | {{TeamLogo|BTX}} 3 - 1 {{TeamLogo|FWPT}}
 | {{TeamLogo|BTX}} 600 - 378 {{TeamLogo|FWPT}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|BTX}} 3 - 5 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1462 - 1256 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|FWPT}}; color:#272B30;" | Ft. Worth Piano Tuners
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|BTX}} 6 - 4 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 1550 - 1392 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|BTX}} 2 - 2 {{TeamLogo|FWPT}}
+| {{TeamLogo|BTX}} 641 - 446 {{TeamLogo|FWPT}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BTX}}; color:#272B30;" | Baltimore Texas
 |}
 
 {{Navbox crown}}

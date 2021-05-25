@@ -113,6 +113,21 @@
 | {{TeamLogo|TB}} 2 - 4 {{TeamLogo|LBFB}}
 | {{TeamLogo|TB}} 732 - 946 {{TeamLogo|LBFB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|TB}} 1 - 3 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 345 - 852 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|TB}} 2 - 2 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 567 - 644 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|TB}} 3 - 6 {{TeamLogo|LBFB}}
+| {{TeamLogo|TB}} 1119 - 1510 {{TeamLogo|LBFB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
 |}
 
 {{Navbox crown}}

@@ -48,6 +48,21 @@
 | {{TeamLogo|AA}} 4 - 6 {{TeamLogo|BB}}
 | {{TeamLogo|AA}} 1354 - 1540 {{TeamLogo|BB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|AA}} 1 - 3 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 440 - 800 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|AA}} 4 - 2 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 900 - 532 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|AA}}; color:#272B30;" | Alewife Arsonists
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|AA}} 2 - 4 {{TeamLogo|BB}}
+| {{TeamLogo|AA}} 782 - 1074 {{TeamLogo|BB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|BB}}; color:#272B30;" | Boylston Boogers
 |}
 
 {{Navbox crown}}

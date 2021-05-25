@@ -113,6 +113,21 @@
 | {{TeamLogo|SFBS}} 2 - 4 {{TeamLogo|SAC}}
 | {{TeamLogo|SFBS}} 486 - 829 {{TeamLogo|SAC}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|SFBS}} 3 - 1 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 566 - 377 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|SFBS}} 5 - 2 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 1118 - 991 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SFBS}}; color:#272B30;" | San Francisco Boat Shoes
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|SFBS}} 1 - 3 {{TeamLogo|SAC}}
+| {{TeamLogo|SFBS}} 363 - 602 {{TeamLogo|SAC}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SAC}}; color:#272B30;" | Sacramento Boot Lickers
 |}
 
 {{Navbox crown}}

@@ -113,6 +113,21 @@
 | {{TeamLogo|MILF}} 1 - 1 {{TeamLogo|DET}}
 | {{TeamLogo|MILF}} 349 - 305 {{TeamLogo|DET}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|MILF}} 5 - 1 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 1059 - 622 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|MILF}}; color:#272B30;" | Milwaukee Flamingos
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|MILF}} 2 - 2 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 570 - 584 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|MILF}} 3 - 5 {{TeamLogo|DET}}
+| {{TeamLogo|MILF}} 1213 - 1131 {{TeamLogo|DET}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|DET}}; color:#272B30;" | Detroit Grape Chews
 |}
 
 {{Navbox crown}}

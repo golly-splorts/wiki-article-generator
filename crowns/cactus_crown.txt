@@ -113,6 +113,21 @@
 | {{TeamLogo|EA}} 3 - 3 {{TeamLogo|TB}}
 | {{TeamLogo|EA}} 681 - 626 {{TeamLogo|TB}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|EA}}; color:#272B30;" | Elko Astronauts
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|EA}} 0 - 4 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 364 - 779 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|EA}} 6 - 10 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 2068 - 2778 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|EA}} 4 - 6 {{TeamLogo|TB}}
+| {{TeamLogo|EA}} 1378 - 1289 {{TeamLogo|TB}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|TB}}; color:#272B30;" | Tucson Butchers
 |}
 
 {{Navbox crown}}

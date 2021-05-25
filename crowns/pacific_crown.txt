@@ -113,6 +113,21 @@
 | {{TeamLogo|LBFB}} 2 - 2 {{TeamLogo|SDBA}}
 | {{TeamLogo|LBFB}} 445 - 372 {{TeamLogo|SDBA}}
 | style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 22|S22]]
+| {{TeamLogo|LBFB}} 3 - 1 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 795 - 419 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|LBFB}}; color:#272B30;" | Long Beach Flightless Birds
+|-
+| [[Season 23|S23]]
+| {{TeamLogo|LBFB}} 1 - 3 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 477 - 946 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
+|-
+| [[Season 24|S24]]
+| {{TeamLogo|LBFB}} 3 - 7 {{TeamLogo|SDBA}}
+| {{TeamLogo|LBFB}} 1325 - 1739 {{TeamLogo|SDBA}}
+| style="font-weight:bold; background-color:{{TeamAbbrToHexColor|SDBA}}; color:#272B30;" | San Diego Balloon Animals
 |}
 
 {{Navbox crown}}
