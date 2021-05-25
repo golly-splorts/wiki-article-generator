@@ -59,10 +59,10 @@ def doit(season0):
 
     plt.style.use("dark_background")
 
-    teams = get_teams()
+    teams = get_teams(season0)
     teams.sort(key=lambda x: x["teamName"])
 
-    maps = get_maps()
+    maps = get_maps(season0)
     maps.sort(key=lambda x: x["mapName"])
 
     season = get_season(season0)
@@ -257,23 +257,15 @@ def get_endpoint_json(endpoint):
     return response.json()
 
 
-def get_teams():
-    endpoint = "/teams"
+def get_teams(season0):
+    endpoint = f"/teams/{season0}"
     teams = get_endpoint_json(endpoint)
     return teams
 
 
-def get_maps(filter_new_maps=False):
-    endpoint = "/maps"
+def get_maps(season0):
+    endpoint = f"/maps/{season0}"
     maps = get_endpoint_json(endpoint)
-    if filter_new_maps:
-        ignore_pattern = [
-            "spaceshipcluster",
-            "spaceshipcrash",
-            "quadjustyna",
-            "randompartition",
-        ]
-        maps = [m for m in maps if m["patternName"] not in ignore_pattern]
     return maps
 
 
