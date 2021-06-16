@@ -1,0 +1,10 @@
+# virtual environment
+vp
+
+# pywikibot
+apicache-py3
+core_stable
+core_stable.zip
+logs
+pywikibot.lwp
+throttle.ctrl
