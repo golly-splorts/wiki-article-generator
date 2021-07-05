@@ -10,6 +10,12 @@ class PseudoCup(object):
     cup = "Pseudo"
 
 
+class ToroidalCup(object):
+    GOLLYX_START_DATE = "2021-05-27"
+    GOLLYX_START_HOUR = "9"
+    cup = "Toroidal"
+
+
 class ChampionsTable(object):
 
     def __init__(self, site):
@@ -183,13 +189,18 @@ class ChampionsTable(object):
         start_date = self.GOLLYX_START_DATE
         start_hour = int(self.GOLLYX_START_HOUR)
         gold_start = datetime.fromisoformat(start_date).replace(hour=start_hour)
+        gold_end = gold_start + timedelta(hours=48+7)
         today = datetime.now()
-        delta = today - gold_start
-        daysfromstart = delta.days
-        weeksfromstart = daysfromstart // 7
-        current_season0 = weeksfromstart
-        last_season0 = current_season0 - 1
+        delta = today - gold_end
+        daysfromend = delta.days
+        weeksfromend = daysfromend // 7
+        last_season0 = weeksfromend
         return last_season0
 
+
 class PseudoChampionsTable(PseudoCup, ChampionsTable):
+    pass
+
+
+class ToroidalChampionsTable(ToroidalCup, ChampionsTable):
     pass

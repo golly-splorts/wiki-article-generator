@@ -1,11 +1,14 @@
-from bot_classes import PseudoChampionsTable
+from templates_championship import PseudoChampionsTable, ToroidalChampionsTable
 from pywikibot import Site
 
 
 if __name__ == "__main__":
 
-    DRY_RUN = True
+    DRY_RUN = False
     site = Site()
 
-    tab = PseudoChampionsTable(site)
-    tab.update(dry_run=DRY_RUN)
+    psu = PseudoChampionsTable(site)
+    psu.update(dry_run=DRY_RUN)
+
+    tor = ToroidalChampionsTable(site)
+    tor.update(dry_run=DRY_RUN)
