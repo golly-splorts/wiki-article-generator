@@ -1,5 +1,7 @@
 # virtual environment
 vp
+gollyx-pseudo-data/
+gollyx-toroidal-data/
 
 # pywikibot
 apicache-py3
