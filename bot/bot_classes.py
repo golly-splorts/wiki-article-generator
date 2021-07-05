@@ -1,3 +1,4 @@
+import os
 import json
 import re
 from pywikibot.page import Page
@@ -39,6 +40,7 @@ class PseudoChampsTable(object):
         """
         if season is None or season < 1:
             last_season0 = self.get_last_season0()
+            season = last_season0 + 1
         else:
             last_season0 = season - 1
 
@@ -129,7 +131,7 @@ class PseudoChampsTable(object):
             self.pseudo_champions_page.text = new_text
             self.pseudo_champions_page.save(
                 "Updating {{Tl|%sCupChampionsTable}} to season %d from pywikibot"
-                % (self.cup, season)
+                % (self.cup, int(season))
             )
 
     def get_teams(self, season0):
@@ -160,10 +162,9 @@ class PseudoChampsTable(object):
         current Pseudo Cup season.
         """
         import pytz
-        import datetime
+        from datetime import datetime, timedelta
 
         time_zone = pytz.timezone("US/Pacific")
-        dtnow = datetime.now(time_zone)
 
         try:
             # User must specify both
@@ -171,7 +172,13 @@ class PseudoChampsTable(object):
             start_hour = int(os.environ["GOLLYX_CLOUD_START_HOUR"])
         except KeyError:
             start_date = GOLLYX_CLOUD_START_DATE
-            start_hour = GOLLYX_CLOUD_START_HOUR
+            start_hour = int(GOLLYX_CLOUD_START_HOUR)
 
-        start_dt = datetime.fromisoformat(start_date).replace(hour=start_hour)
-        return
+        gold_start = datetime.fromisoformat(start_date).replace(hour=start_hour)
+        today = datetime.now()
+        delta = today - gold_start
+        daysfromstart = delta.days
+        weeksfromstart = daysfromstart // 7
+        current_season0 = weeksfromstart
+        last_season0 = current_season0 - 1
+        return last_season0
