@@ -4,15 +4,18 @@ import re
 from pywikibot.page import Page
 
 
-# These values can be overridden by setting
-# environment variables with the same name
-GOLLYX_CLOUD_START_DATE = "2021-05-24"
-GOLLYX_CLOUD_START_HOUR = "9"
+class PseudoCup(object):
+    GOLLYX_START_DATE = "2021-05-24"
+    GOLLYX_START_HOUR = "9"
+    cup = "Pseudo"
 
 
-class PseudoChampsTable(object):
+class ChampionsTable(object):
+
     def __init__(self, site):
-        self.cup = "Pseudo"
+        if self.cup is None:
+            raise NotImplemented("Error: ChampionsTable is a virtual class")
+
         self.site = site
         self.page_title = f"Template:{self.cup}CupChampionsTable"
         self.pseudo_champions_page = Page(self.site, self.page_title)
@@ -25,13 +28,17 @@ class PseudoChampsTable(object):
 !Series W-L
 !Loser
 !Losing Division
-"""%(self.cup)
+""" % (
+            self.cup
+        )
 
         self.text_tail = """|}<noinclude>
 [[Category:%s Cup]]
 [[Category:Update Each Season]]
 </noinclude>
-"""%(self.cup)
+""" % (
+            self.cup
+        )
 
     def update(self, season=None, dry_run=True):
         """
@@ -48,7 +55,7 @@ class PseudoChampsTable(object):
 
         new_lines.append(self.text_head)
 
-        for season0 in range(0, last_season0+1):
+        for season0 in range(0, last_season0 + 1):
             teams = self.get_teams(season0)
 
             fname = f"gollyx-{self.cup.lower()}-data/season{season0}/postseason.json"
@@ -63,23 +70,31 @@ class PseudoChampsTable(object):
             if last_game["team1Score"] > last_game["team2Score"]:
                 win_team_abbr = last_game["team1Abbr"]
                 win_team_name = last_game["team1Name"]
-                win_team_lea, win_team_div = self.get_team_league_div(win_team_name, teams)
+                win_team_lea, win_team_div = self.get_team_league_div(
+                    win_team_name, teams
+                )
                 win_team_w = 4
 
                 los_team_abbr = last_game["team2Abbr"]
                 los_team_name = last_game["team2Name"]
-                los_team_lea, los_team_div = self.get_team_league_div(los_team_name, teams)
+                los_team_lea, los_team_div = self.get_team_league_div(
+                    los_team_name, teams
+                )
                 los_team_w = last_game["team2SeriesWinLoss"][0]
 
             else:
                 win_team_abbr = last_game["team2Abbr"]
                 win_team_name = last_game["team2Name"]
-                win_team_lea, win_team_div = self.get_team_league_div(win_team_name, teams)
+                win_team_lea, win_team_div = self.get_team_league_div(
+                    win_team_name, teams
+                )
                 win_team_w = 4
 
                 los_team_abbr = last_game["team1Abbr"]
                 los_team_name = last_game["team1Name"]
-                los_team_lea, los_team_div = self.get_team_league_div(los_team_name, teams)
+                los_team_lea, los_team_div = self.get_team_league_div(
+                    los_team_name, teams
+                )
                 los_team_w = last_game["team1SeriesWinLoss"][0]
 
             text_body = "|-\n"
@@ -159,21 +174,14 @@ class PseudoChampsTable(object):
     def get_last_season0(self):
         """
         Uses some basic datetime math to get the
-        current Pseudo Cup season.
+        current Cup season.
         """
         import pytz
         from datetime import datetime, timedelta
 
         time_zone = pytz.timezone("US/Pacific")
-
-        try:
-            # User must specify both
-            start_date = os.environ["GOLLYX_CLOUD_START_DATE"]
-            start_hour = int(os.environ["GOLLYX_CLOUD_START_HOUR"])
-        except KeyError:
-            start_date = GOLLYX_CLOUD_START_DATE
-            start_hour = int(GOLLYX_CLOUD_START_HOUR)
-
+        start_date = self.GOLLYX_START_DATE
+        start_hour = int(self.GOLLYX_START_HOUR)
         gold_start = datetime.fromisoformat(start_date).replace(hour=start_hour)
         today = datetime.now()
         delta = today - gold_start
@@ -182,3 +190,6 @@ class PseudoChampsTable(object):
         current_season0 = weeksfromstart
         last_season0 = current_season0 - 1
         return last_season0
+
+class PseudoChampionsTable(PseudoCup, ChampionsTable):
+    pass

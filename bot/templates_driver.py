@@ -1,11 +1,11 @@
-from bot_classes import PseudoChampsTable
+from bot_classes import PseudoChampionsTable
 from pywikibot import Site
 
 
 if __name__ == "__main__":
 
-    DRY_RUN = False
+    DRY_RUN = True
     site = Site()
 
-    tab = PseudoChampsTable(site)
+    tab = PseudoChampionsTable(site)
     tab.update(dry_run=DRY_RUN)
