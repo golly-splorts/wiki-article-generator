@@ -1,8 +1,14 @@
 from templates_championship import (
     PseudoChampionsTable,
-    PseudoPenantTable,
     ToroidalChampionsTable,
-    ToroidalPenantTable,
+)
+from templates_pennant import (
+    PseudoPennantTable,
+    ToroidalPennantTable,
+)
+from templates_titles import (
+    PseudoDivTitleTable,
+    ToroidalDivTitleTable,
 )
 from pywikibot import Site
 
@@ -18,8 +24,15 @@ if __name__ == "__main__":
     # tor = ToroidalChampionsTable(site)
     # tor.update(dry_run=DRY_RUN)
 
-    psup = PseudoPenantTable(site)
-    psup.update(dry_run=DRY_RUN)
+    #psup = PseudoPennantTable(site)
+    #psup.update(dry_run=DRY_RUN)
 
-    tsup = ToroidalPenantTable(site)
-    tsup.update(dry_run=DRY_RUN)
+    #tsup = ToroidalPennantTable(site)
+    #tsup.update(dry_run=DRY_RUN)
+
+    psut = PseudoDivTitleTable(site)
+    psut.update(dry_run=DRY_RUN)
+
+    tsut = ToroidalDivTitleTable(site)
+    tsut.update(dry_run=DRY_RUN)
+
